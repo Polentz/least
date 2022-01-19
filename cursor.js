@@ -39,6 +39,19 @@ menuLinks.forEach(link => {
 logo.addEventListener("mouseenter", () => {
     cursor.style.width = 200 + "px";
     cursor.style.height = 200 + "px";
+    // lines.forEach(line => {
+    //     line.style.strokeDasharray = "550px";
+    //     line.style.strokeDashoffset = "550px";
+    //     line.style.animation = "3s ease-in 0s 1 alternate-reverse forwards draw-line"
+
+    // });
+});
+logo.addEventListener("mouseleave", () => {
+    cursor.style.width = 40 + "px";
+    cursor.style.height = 40 + "px";
+});
+logo.addEventListener("click", (event) => {
+    event.preventDefault();
     lines.forEach(line => {
         line.style.strokeDasharray = "550px";
         line.style.strokeDashoffset = "550px";
@@ -52,8 +65,4 @@ logo.addEventListener("mouseenter", () => {
         const href = "apropos.html"
         document.location.href = href
     }, 4000);
-});
-logo.addEventListener("mouseleave", () => {
-    cursor.style.width = 40 + "px";
-    cursor.style.height = 40 + "px";
 });
