@@ -1,0 +1,210 @@
+@font-face {
+    font-family: "SpratCndBold";
+    src: url("fonts/SpratCndBold.woff2") format("woff2"),
+         url("fonts/SpratCndBold.woff") format("woff");
+}
+
+@keyframes float {
+    from { transform: rotate(0deg) translateX(5px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(5px) rotate(-360deg); }
+}
+
+@keyframes draw-line {
+    0% { stroke-dashoffset: 550px; }
+    100% {  stroke-dashoffset: 0px; }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    text-rendering: geometricPrecision;
+}
+
+a {
+    color: #1d1d1d;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+body {
+    background: #F2F0F2;
+}
+
+#cursor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #D0BBFF;
+    z-index: 1;
+    filter: blur(5px);
+    transition: background-color .5s ease, width .2s ease, height .2s ease;
+    pointer-events: none;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    cursor: none;
+    transition: opacity .5s ease-out;
+}
+
+.fade {
+    opacity: 0;
+}
+
+.shapes {
+    width: 100vw;
+    height: 100vh; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.line {
+    fill: none;
+    stroke-width: .4px;
+    stroke: #fff;
+    pointer-events: none; 
+}
+
+.main,
+.labels-list {
+    width: 100vw;
+    height: 100vh; 
+}
+
+.logo {
+    grid-column-start: 6;
+    grid-row-start: 3;
+    align-self: center;
+}
+
+.logo, 
+.label {
+    z-index: 2;
+}
+
+.logo h1 {
+    font-family: "SpratCndBold", serif;
+    font-size: 15vw;
+    line-height: 0;
+    padding: 16px;
+}
+
+.logo a {
+    cursor: none;
+}
+
+.labels-list {
+    display: grid;
+    grid-template-columns: repeat(11, calc(100% / 11));
+    grid-template-rows: repeat(5, 20%);
+    align-items: center;
+    justify-items: center;
+}
+
+.label {
+    animation: float 5s linear infinite;
+}
+
+.label a {
+    padding: 8px 0;
+    cursor: none;
+}
+
+.label a::before,
+.label a::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #1d1d1d;
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+}
+
+.label a::before {
+    content: '';
+}
+
+.label a::before {
+    transform-origin: 50% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+}
+
+.label a:hover::before {
+    transform-origin: 50% 50%;
+    transform: scale3d(1, 1, 1);
+}
+
+.label h2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: lowercase;
+}
+
+.label:nth-child(2) {
+    grid-column-start: 10;
+    grid-row-start: 3;
+    text-align: center;
+    animation-duration: 5.2s;
+    animation-direction: reverse;
+}
+
+.label:nth-child(3) {
+    grid-column-start: 3;
+    grid-row-start: 2;
+    animation-duration: 5.4s;
+}
+
+.label:nth-child(4) {
+    grid-column-start: 6;
+    grid-row-start: 1;
+    align-self: end;
+    text-align: center;
+    animation-duration: 5.6s;
+    animation-direction: reverse;
+}
+
+.label:nth-child(5) {
+    grid-column-start: 3;
+    grid-row-start: 4;
+    justify-self: start;
+    animation-duration: 5.8s;
+}
+
+.label:nth-child(6) {
+    grid-column-start: 6;
+    grid-row-start: 5;
+    animation-duration: 5.6s;
+    animation-direction: reverse;
+}
+
+.label:nth-child(7) {
+    grid-column-start: 8;
+    grid-row-start: 4;
+    align-self: end;
+    animation-duration: 5.2s;
+}
+
+.label:nth-child(8) {
+    grid-column-start: 9;
+    grid-row-start: 2;
+    animation-duration: 5.4s;
+}
+
+.label:nth-child(9) {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    animation-direction: reverse;
+}
