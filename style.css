@@ -28,12 +28,13 @@ a {
 
 body {
     background: #F2F0F2;
+    overflow-x: hidden;
 }
 
 #cursor {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 0;
+    left: 0;
     transform: translate(-50%, -50%);
     width: 40px;
     height: 40px;
@@ -69,8 +70,8 @@ body {
 
 .line {
     fill: none;
-    stroke-width: .4px;
-    stroke: #fff;
+    stroke-width: .2px;
+    stroke: #1d1d1d;
     pointer-events: none; 
 }
 
