@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>least - programme circulaire</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" as="font"
+        crossorigin>
+</head>
+
+<body>
+    <div id="cursor"></div>
+    <section class="main">
+        <nav class="top-nav">
+            <div class="top-nav-wrapper">
+                <div class="top-nav-link">
+                    <a href="co-creation.html" class="link">Co-création</a>
+                </div>
+                <div class="top-nav-link">
+                    <a class="link artiste-apprenti">Artiste apprenti</a>
+                </div>
+                <div class="top-nav-link">
+                    <a href="" class="link">École de la transition</a>
+                </div>
+                <div class="top-nav-link">
+                    <a href="" class="link">Résidence</a>
+                </div>
+            </div>
+        </nav>
+        <nav class="side-nav">
+            <div class="menu-btn"></div>
+            <span class="menu-trigger">Menu</span>
+            <div class="labels-list menu">
+                <div class="logo-static">
+                    <h1>Least</h1>
+                </div>
+                <div class="label">
+                    <a href="programme-circulaire.html" class="link js-link" type="button">Programme circulaire</a>
+                </div>
+                <div class="label">
+                    <a href="" class="link js-link" type="button">Vidéo</a>
+                </div>
+                <div class="label">
+                    <a href="apropos.html" class="link js-link" type="button" style="white-space: nowrap;">À propos</a>
+                </div>
+                <div class="label">
+                    <a href="apropos.html#contact" class="link" type="button">Contact</a>
+                </div>
+                <div class="label">
+                    <a href="" class="link js-link" type="button">Équipe</a>
+                </div>
+                <div class="label">
+                    <a href="" class="link js-link" type="button">Newsletter</a>
+                </div>
+                <div class="label">
+                    <a href="lectures.html" class="link js-link" type="button">Lectures</a>
+                </div>
+                <div class="label">
+                    <a href="" class="link js-link" type="button">Podcast</a>
+                </div>
+                <div class="lang">
+                    <a href="" class="link js-link" type="button">EN</a>
+                </div>
+                <div class="close-btn"></div>
+            </div>
+        </nav>
+        <nav class="sub-nav artiste-apprenti-menu">
+            <ul>
+                <li><a href="artiste-apprenti/project-1.html" class="link">Project 1</a></li>
+                <li><a href="" class="link">Project 3</a></li>
+                <li><a href="" class="link">Project 2</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <div class="grid-container --has-padding --has-margin">
+                <div class="grid-item --column-full">
+                    <h1 class="--text-l">Programme circulaire</h1>
+                </div>
+                <div class="grid-item --column-2-4">
+                    <p class="--text-m">least se décline en quatre axes distincts mais reliés entre eux. Autour d’un
+                        noyau principal constitué de projets artis- tiques, sociaux et environnementaux participatifs,
+                        gravite un programme circulaire qui comprend de la formation continue pour jeunes artistes, une
+                        école de la transition et des résidences de recherche. L’équipe de least travaille à l’année
+                        pour réaliser et mettre en œuvre ce programme constitué par ces diverses dimensions liées et
+                        simultanées.</p>
+                    <p class="--text-m">Le programme de least peut être vu comme un cycle qui peut se perpétuer par les
+                        liens entre ses
+                        différents éléments. Si chaque axe peut être appréhendé/vécu/compris pour lui- même, chacun
+                        représente un segment essentiel du cycle,
+                        et est lié aux autres dans une circularité, une continuité. Les artistes en formation
+                        deviendront certainement les résidentes et résidents. Ils seront ensuite vraisemblablement</p>
+                </div>
+            </div>
+
+            <!-- <div class="grid-container full-width">
+                <div class="--column-1-3 flex --purple">
+                    <h2 class="--title-m --has-padding">Co-création</h2>
+                </div>
+                <div class="--column-3-5 flex --yellow">
+                    <h2 class="--title-m --has-padding">Artiste apprenti</h2>
+                </div>
+            </div>
+            <div class="grid-container full-width">
+                <div class="--column-1-3 flex --green">
+                    <h2 class="--title-m --has-padding">École de la transition</h2>
+                </div>
+                <div class="--column-3-5 flex --light-blue">
+                    <h2 class="--title-m --has-padding">Résidence</h2>
+                </div>
+            </div> -->
+
+        </div>
+
+    </section>
+
+    <script src="cursor.js"></script>
+    <script src="menu.js"></script>
+    <script>
+        window.onload = functions;
+
+        function functions() {
+            subMenu(".artiste-apprenti", ".artiste-apprenti-menu");
+        }
+    </script>
+    <!-- <script src="script.js"></script> -->
+</body>
