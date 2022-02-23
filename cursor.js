@@ -1,5 +1,5 @@
 const cursor = document.getElementById("cursor");
-const cursorLinks = document.querySelectorAll(".link");
+const allLinks = document.querySelectorAll("a");
 
 document.addEventListener("mousemove", (event) => {
     let x = event.pageX;
@@ -16,19 +16,19 @@ document.addEventListener("mousemove", (event) => {
     } else if (xX > 25 + "%" && xX <= 50 + "%") {
         cursor.style.backgroundColor = "var(--purple)";
     } else if (xX > 50 + "%" && xX <= 75 + "%") {
-        cursor.style.backgroundColor = "var(--light-blue)";
+        cursor.style.backgroundColor = "var(--blue)";
     } else {
-        cursor.style.backgroundColor = "var(--yellow)";
+        cursor.style.backgroundColor = "var(--orange)";
     }
 });
 
-cursorLinks.forEach(link => {
+allLinks.forEach(link => {
     link.addEventListener("mouseenter", () => {
-        cursor.style.width = 96 + "px";
-        cursor.style.height = 96 + "px";
+        cursor.style.width = 10 + "vw";
+        cursor.style.height = 10 + "vw";
     });
     link.addEventListener("mouseleave", () => {
-        cursor.style.width = 40 + "px";
-        cursor.style.height = 40 + "px";
+        cursor.style.width = 6 + "vw";
+        cursor.style.height = 6 + "vw";
     });
 });

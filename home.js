@@ -1,50 +1,79 @@
-// const section = document.querySelector(".main");
-const homeLinks = document.querySelectorAll(".js-link");
-const logo = document.querySelector(".logo");
-const logoText = document.querySelector(".logo h2");
-const lines = document.querySelectorAll(".line");
+// lines animation
+const logoPath = document.querySelectorAll(".logo-path");
+const disegnoPath = document.querySelectorAll(".disegno-path");
+const shadowPath = document.querySelectorAll(".disegno-shadow");
+const subTitle = document.querySelector(".header p");
+const uiComp = document.querySelector(".ui-comp a");
+const circlePath = document.querySelectorAll(".circle-path");
 
-homeLinks.forEach(link => {
-    link.addEventListener("click", (event) => {
-        event.preventDefault();
-        lines.forEach(line => {
-            line.style.strokeDasharray = "550px";
-            line.style.strokeDashoffset = "550px";
-            line.style.animation = "3s ease-in 0s 1 alternate-reverse forwards draw-line"
-        });
-        // setTimeout(() => {
-        //     section.classList.add("fade-out");
-        // }, 3000);
-        const url = link.getAttribute("href");
+window.addEventListener("load", () => {
+    logoPath.forEach(line => {
+        line.style.strokeDasharray = "1";
+        line.style.strokeDashoffset = "1";
+        line.style.animation = "drawLine 2.5s ease-in-out alternate forwards 1";
         setTimeout(() => {
-            document.location.href = url;
-        }, 4000);
+            line.style.animation = "fill 2s ease alternate forwards 1";
+            subTitle.classList.add("appear");
+        }, 2500);
+        setTimeout(() => {
+            uiComp.classList.add("appear");
+        }, 2800);
+    });
+    disegnoPath.forEach(line => {
+        line.style.strokeDasharray = "1";
+        line.style.strokeDashoffset = "1";
+        line.style.animation = "drawLine 3s ease-in-out alternate-reverse forwards 1";
+        setTimeout(() => {
+            line.style.animation = "fillMix 20s ease alternate infinite";
+        }, 2500);
+    });
+    circlePath.forEach(line => {
+        line.style.strokeDasharray = "1";
+        line.style.strokeDashoffset = "1";
+        line.style.animation = "drawLine 5s ease-in-out alternate forwards 1";
+    });
+    shadowPath.forEach(line => {
+        line.style.strokeDasharray = "1";
+        line.style.strokeDashoffset = "1";
+        line.style.animation = "drawLine 3s ease-in-out forwards 1";
     });
 });
 
-logo.addEventListener("mouseenter", () => {
-    cursor.style.width = 200 + "px";
-    cursor.style.height = 200 + "px";
-    logoText.style.opacity = 1;
-});
-logo.addEventListener("mouseleave", () => {
-    cursor.style.width = 40 + "px";
-    cursor.style.height = 40 + "px";
-    logoText.style.opacity = 0;
-});
 
-logo.addEventListener("click", (event) => {
-    event.preventDefault();
-    lines.forEach(line => {
-        line.style.strokeDasharray = "550px";
-        line.style.strokeDashoffset = "550px";
-        line.style.animation = "3s ease-in 0s 1 alternate-reverse forwards draw-line"
+
+// slideshow
+const btnLeft = document.getElementById("btn-left");
+const btnRight = document.getElementById("btn-right");
+const scrollContainer = document.querySelector(".gallery");
+const images = document.querySelectorAll(".gallery img");
+const distance = window.screen.width / 2;
+
+btnLeft.addEventListener("click", () => {
+    scrollContainer.scrollBy({
+        left: -distance,
+        behavior: "smooth"
     });
-    // setTimeout(() => {
-    //     section.classList.add("fade-out");
-    // }, 3000);
-    setTimeout(() => {
-        const href = "apropos.html"
-        document.location.href = href
-    }, 3000);
+    images.forEach(image => {
+        image.style.filter = "none"
+    });
+    window.addEventListener("scroll", () => {
+        images.forEach(image => {
+            image.style.filter = "grayscale(1)"
+        });
+    })
+})
+
+btnRight.addEventListener("click", () => {
+    scrollContainer.scrollBy({
+        left: distance,
+        behavior: "smooth"
+    });
+    images.forEach(image => {
+        image.style.filter = "none";
+    });
+    window.addEventListener("scroll", () => {
+        images.forEach(image => {
+            image.style.filter = "grayscale(1)";
+        });
+    })
 });
