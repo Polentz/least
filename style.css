@@ -140,7 +140,7 @@ body {
 
 .nav-label,
 .button a,
-.marquee span {
+.home-btn a {
     font-family: "Space Grotesk", sans-serif;
     font-weight: 500;
     font-size: var(--txt-xsmall);
@@ -436,7 +436,7 @@ li {
 
 .menu {
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -451,6 +451,16 @@ li {
 .menu.open {    
     opacity: 1;
     visibility: visible;
+}
+
+.home-btn {
+    position: absolute;
+    top: 0;
+    right: calc(6vw + 1rem);
+    padding: 6vh 0;
+    display: flex;
+    /* justify-content: flex-end; */
+    align-items: center;
 }
 
 .menu-wrapper {
@@ -649,6 +659,9 @@ li {
     }
     .nav {
         position: fixed;
+        padding: 4vh 0;
+    }
+    .home-btn {
         padding: 4vh 0;
     }
     .grid {

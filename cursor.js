@@ -1,5 +1,6 @@
 const cursor = document.getElementById("cursor");
 const allLinks = document.querySelectorAll("a");
+const menuTriggers = document.querySelectorAll(".nav-wrapper")
 
 document.addEventListener("mousemove", (event) => {
     let x = event.pageX;
@@ -23,6 +24,17 @@ document.addEventListener("mousemove", (event) => {
 });
 
 allLinks.forEach(link => {
+    link.addEventListener("mouseenter", () => {
+        cursor.style.width = 10 + "vw";
+        cursor.style.height = 10 + "vw";
+    });
+    link.addEventListener("mouseleave", () => {
+        cursor.style.width = 6 + "vw";
+        cursor.style.height = 6 + "vw";
+    });
+});
+
+menuTriggers.forEach(link => {
     link.addEventListener("mouseenter", () => {
         cursor.style.width = 10 + "vw";
         cursor.style.height = 10 + "vw";
