@@ -1,42 +1,38 @@
-// lines animation
-const logoPath = document.querySelectorAll(".logo-path");
+
 const disegnoPath = document.querySelectorAll(".disegno-path");
-const shadowPath = document.querySelectorAll(".disegno-shadow");
+// const shadowPath = document.querySelectorAll(".disegno-shadow");
+// const header = document.querySelector(".header");
 const subTitle = document.querySelector(".header p");
-const uiComp = document.querySelector(".ui-comp a");
-const circlePath = document.querySelectorAll(".circle-path");
+const cover = document.getElementById("cover");
+// const body = document.querySelector(".home");
+const uiComp = document.querySelector(".ui-comp");
+const nav = document.querySelector(".primary-nav");
+
 
 window.addEventListener("load", () => {
-    logoPath.forEach(line => {
-        line.style.strokeDasharray = "1";
-        line.style.strokeDashoffset = "1";
-        line.style.animation = "drawLine 2.5s ease-in-out alternate forwards 1";
-        setTimeout(() => {
-            line.style.animation = "fill 2s ease alternate forwards 1";
-            subTitle.classList.add("appear");
-        }, 2500);
-        setTimeout(() => {
-            uiComp.classList.add("appear");
-        }, 2800);
-    });
+    // body.style.overflowY = "hidden";
     disegnoPath.forEach(line => {
         line.style.strokeDasharray = "1";
         line.style.strokeDashoffset = "1";
         line.style.animation = "drawLine 3s ease-in-out alternate-reverse forwards 1";
-        setTimeout(() => {
-            line.style.animation = "fillMix 20s ease alternate infinite";
-        }, 2500);
     });
-    circlePath.forEach(line => {
-        line.style.strokeDasharray = "1";
-        line.style.strokeDashoffset = "1";
-        line.style.animation = "drawLine 5s ease-in-out alternate forwards 1";
-    });
-    shadowPath.forEach(line => {
-        line.style.strokeDasharray = "1";
-        line.style.strokeDashoffset = "1";
-        line.style.animation = "drawLine 3s ease-in-out forwards 1";
-    });
+    // shadowPath.forEach(line => {
+    //     line.style.strokeDasharray = "1";
+    //     line.style.strokeDashoffset = "1";
+    //     line.style.animation = "drawLine 3.5s ease-in-out reverse forwards 1";
+
+    // });
+    setTimeout(() => {
+        subTitle.classList.add("appear");
+    }, 2000);
+    setTimeout(() => {
+        uiComp.classList.add("appear");
+        nav.classList.add("appear");
+    }, 2500);
+    // setTimeout(() => {
+    //     cover.classList.add("fade-out");
+    //     body.style.overflowY = "scroll";
+    // }, 3500);
 });
 
 
@@ -77,3 +73,9 @@ btnRight.addEventListener("click", () => {
         });
     })
 });
+
+// detect viewport
+const inViewport = (event) => {
+    const elementRect = event.getBoundingClientRect();
+    return (elementRect.top < innerHeight && elementRect.bottom > 0);
+};
