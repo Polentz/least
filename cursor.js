@@ -3,14 +3,11 @@ const circles = cursor.querySelectorAll(".cursor");
 const cSmall = cursor.querySelectorAll(".due");
 const cMedium = cursor.querySelectorAll(".tre");
 const allLinks = document.querySelectorAll("a, .open-btn, .close-btn");
+let aimX = 0
+let aimY = 0
 
 
 document.addEventListener("mousemove", (event) => {
-    // let x = event.pageX;
-    // let y = event.pageY;
-    // cursor.style.left = x + "px";
-    // cursor.style.top = y + "px";
-
     let w = document.body.clientWidth;
     let xP = event.pageX / w * 100;
     let xX = xP.toFixed(0);
@@ -48,8 +45,6 @@ allLinks.forEach(link => {
             c.style.width = 10 + "vw";
             c.style.height = 10 + "vw";
         })
-
-
     });
     link.addEventListener("mouseleave", () => {
         circles.forEach(c => {
@@ -67,35 +62,21 @@ allLinks.forEach(link => {
     });
 });
 
-
-// const cursor = document.getElementById("cursor");
-// const allLinks = document.querySelectorAll("a, .open-btn, .close-btn");
-
-
-let aimX = 0
-let aimY = 0
-
 circles.forEach((c, index) => {
     let currentX = 0
     let currentY = 0
-
     let speed = 0.8 - index * 0.15
-
     const animate = function () {
         currentX += (aimX - currentX) * speed
         currentY += (aimY - currentY) * speed
-
         c.style.left = currentX + "px"
         c.style.top = currentY + "px"
-
         requestAnimationFrame(animate);
     }
-
     animate()
 })
 
-
-document.addEventListener("mousemove", function (event) {
+document.addEventListener("mousemove", (event) => {
     aimX = event.pageX
     aimY = event.pageY
 })

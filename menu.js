@@ -5,7 +5,6 @@ const closeBtn = document.querySelector(".close-btn");
 const menu = document.querySelector(".menu");
 const menuLabel = document.querySelector(".nav-label");
 const menuLinks = document.querySelectorAll(".menu a");
-// const homeLink = document.querySelector(".home-btn a")
 
 openMenu.addEventListener("click", () => {
     openBtn.classList.add("scale");
@@ -31,7 +30,7 @@ menuLinks.forEach(link => {
         const url = link.getAttribute("href");
         setTimeout(() => {
             document.location.href = url;
-        }, 1500);
+        }, 1300);
     });
 });
 
