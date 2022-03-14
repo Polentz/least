@@ -28,6 +28,7 @@
 
 :root {
     --bg-color: #fff;
+    /* #fffcf7 */
     --accent: #f9e0ba;
     --txt-color: #1d1d1d;
 
@@ -79,11 +80,24 @@ body {
     color: var(--txt-color);
 }
 
-canvas {
+.backdrop-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    pointer-events: none;
+    filter: blur(10px);
+}
+
+#canvas {
+    position: relative;
+}
+
+/* canvas {
     vertical-align: bottom;
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     pointer-events: none;
@@ -92,7 +106,7 @@ canvas {
             filter: blur(2px);
     z-index: 999; 
     background-color: transparent;
-}
+} */
 
 /* text variables */
 .title,
@@ -352,8 +366,8 @@ li {
 }
 
 .due {
-    width: 2vw;
-    height: 2vw;
+    width: 4vw;
+    height: 4vw;
     /* background-color: transparent;
     border: solid 3px #d0bbff; */
 }

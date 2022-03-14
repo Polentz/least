@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
     disegnoPath.forEach(line => {
         line.style.strokeDasharray = "1";
         line.style.strokeDashoffset = "1";
-        line.style.animation = "drawLine 3s ease-in-out alternate-reverse forwards 1";
+        line.style.animation = "drawLine 3s ease-in-out alternate forwards 1";
     });
     setTimeout(() => {
         subTitle.classList.add("appear");
