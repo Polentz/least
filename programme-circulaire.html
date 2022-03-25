@@ -1,174 +1,94 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>least</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>least - programme circulaire</title>
     <link rel="stylesheet" href="style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" as="font"
+        crossorigin>
 </head>
 
-<body class="main">
-    <div id="cursor">
-        <div class="cursor"></div>
-        <div class="cursor due"></div>
-        <div class="cursor tre"></div>
-        <div class="cursor due"></div>
-        <div class="cursor tre"></div>
-        <div class="cursor due"></div>
-        <div class="cursor tre"></div>
-        <div class="cursor due"></div>
-    </div>
-
-    <nav class="nav --blend">
-        <div class="nav-wrapper"></div>
-        <div class="nav-wrapper open-menu">
-            <div class="nav-circle open-btn"></div>
-            <div class="nav-label">Menu</div>
+<body>
+    <header class="header">
+        <div class="header-wrapper">
+            <!-- <h1 class="logo"></h1> -->
+            <h1 class="title">least</h1>
+            <h3 class="title">laboratoire écologie et art pour une société en transition</h3>
         </div>
-        <div class="nav-wrapper">
-            <div><a href="" class="txt-small lang current">fr</a></div>
-            <div><a href="" class="txt-small lang">en</a></div>
+    </header>
+    <nav class="side-nav">
+        <div class="menu-btn"></div>
+        <span class="menu-trigger">Menu</span>
+        <div class="lang">
+            <a href="">en</a>
         </div>
+        <div class="menu">
+            <div class="menu-wrapper">
+                <ul class="menu-col">
+                    <li class="menu-link"><a href="index.html">À propos</a></li>
+                    <li class="menu-link"><a href="pour-en-savoir-plus.html">Pour en savoir plus</a></li>
+                    <li class="menu-link"><a href="programme-circulaire.html">Programme circulaire</a></li>
+                    <li class="menu-link"><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="close-btn"></div>
     </nav>
-    <div class="menu">
-        <nav class="nav">
-            <div class="nav-wrapper"></div>
-            <div class="nav-wrapper close-menu">
-                <div class="nav-circle close-btn"></div>
-                <div class="nav-label">Close</div>
-            </div>
-            <div class="nav-wrapper">
-                <div><a href="" class="txt-small current">fr</a></div>
-                <div><a href="" class="txt-small">en</a></div>
-            </div>
-        </nav>
-        <div class="menu-wrapper">
-            <ul class="menu-col-1">
-                <li class="menu-link"><a href="index.html#à-propos">À propos</a></li>
-                <li class="menu-link"><a href="pour-en-savoir-plus.html">Pour en savoir plus</a></li>
-                <li class="menu-link"><a href="programme-circulaire.html">Programme circulaire</a></li>
-                <li class="menu-link"><a href="index.html#contact">Contact</a></li>
-            </ul>
-            <ul class="menu-col-2">
-                <li class="txt-small"><a href="index.html">homepage</a></li>
-            </ul>
-        </div>
-    </div>
 
-    <section>
-        <div class="grid content">
-            <div class="content-title --col-1-1">
-                <h2 class="title">programme circulaire</h2>
+    <main class="content">
+        <section>
+            <div class="grid-layout --layout-two-col">
+                <div class="grid-block --outline">
+                    <h2 class="--txt-large">Programme circulaire</h2>
+                </div>
+                <div class="grid-block --outline --yellow">
+                    <p class="txt-copy-m">least se décline en quatre axes distincts mais reliés entre eux. Autour d’un
+                        noyau principal constitué de projets artis- tiques, sociaux et environnementaux participatifs,
+                        gravite un programme circulaire qui comprend de la formation continue pour jeunes artistes, une
+                        école de la transition et des résidences de recherche.</p>
+                    <p>L’équipe de least travaille à l’année
+                        pour réaliser et mettre en œuvre ce programme constitué par ces diverses dimensions liées et
+                        simultanées.</p>
+                </div>
             </div>
-            <div class="content-copy --col-1-4">
-                <p class="subtitle mobile">les projets participatifs et inclusifs</p>
-                <p class="txt-serif">least se décline en quatre axes distincts mais reliés entre eux. Autour d’un noyau
-                    principal constitué de projets artistiques, sociaux et environnementaux participatifs, gravite un
-                    programme circulaire qui comprend de la formation continue pour jeunes artistes, une école de la
-                    transition et des résidences de recherche. L’équipe de least travaille à l’année pour réaliser et
-                    mettre en œuvre ce programme constitué par ces diverses dimensions liées et simultanées.</p>
-            </div>
-            <div class="content-copy --col-1-2 desktop">
-                <p class="subtitle">les projets participatifs et inclusifs</p>
-            </div>
-            <div class=" content-copy --col-2-5">
-                <p class="txt-serif">Sur la base de liens déjà existants avec des artistes ou en lançant des appels,
-                    least a pour objectif de mettre en lien des artistes, des scientifiques et une population donnée,
-                    qu’il s’agisse de groupes déjà constitués ou simplement de personnes intéressées, comme les
-                    habitant·e·s d’un quartier, une communauté de personnes âgées, des jeunes, une école, une
-                    entreprise. A ce sujet, il est important de signaler qu’une attention particulière sera apportée à
-                    des créations destinées à des enfants et à des jeunes. Il est fondamental que les nouvelles
-                    générations aient accès à des pistes de réflexion et qu’elles puissent se sentir actrices de la
-                    définition du monde de demain.</p>
-            </div>
-            <div class=" content-copy --col-1-4">
-                <p class="txt-serif">La communauté ainsi formée sera active dans un contexte réel, où elle sera amenée à
-                    côtoyer d’autres groupes locaux, des représentants des autorités locales, des scientifiques,
-                    d’autres artistes, etc. avec qui les échanges se feront sur un mode inédit. Il peut s’agir de
-                    projets accompagnant des transformations urbanistiques (nouveau quartier, gentrification, nouveaux
-                    axes de transports, etc.), d’autres plus en lien avec les problématiques environnementales
-                    (pollution de l’air, de l’eau, nuisances sonores, etc.), ou encore des actions en lien avec les
-                    problématiques sociales propres aux lieux choisis (perte du lien social, problématiques
-                    intergénérationnelles, personnes marginalisées, migration, etc.).</p>
-            </div>
-            <div class=" content-copy --col-1-4">
-                <p class="txt-serif">Afin que les projets puissent se définir, se construire et se réaliser dans les
-                    meilleures conditions, et afin que les contenus aient le temps de se développer et de s’imprégner
-                    dans les pensées des participant·e·s et au-delà, least privilégie des actions au long cours. Elles
-                    devraient durer au minimum six mois, mais en général plutôt 1 ou 2 ans, voire même plus.</p>
-            </div>
-            <div class=" content-copy --col-1-4">
-                <p class="txt-serif">Dans l’optique d’un changement de modèle de production, l’équipe de least tient à
-                    ce que les artistes soient rémunéré·e·s correctement, idéalement en leur versant un salaire lissé
-                    sur l’année (ou la période définie), afin qu’ils et elles puissent compter sur un revenu régulier.
-                </p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <div class="gallery-btn grid">
-            <div class="button-wrapper --col-4-5">
-                <button class="button" id="btn-left">
-                    <span><a>&larr;</a></span>
-                </button>
-                <button class="button" id="btn-right">
-                    <span><a>&rarr;</a></span>
-                </button>
-                <!-- <a id="btn-left">&larr;</a>
-                <a id="btn-right">&rarr;</a> -->
+        <section id="categories">
+            <div class="grid-layout --layout-two-col">
+                <div class="grid-block --outline">
+                    <h2 class="--txt-large">Co-création</h2>
+                </div>
+                <div class="grid-block --outline">
+                    <h2 class="--txt-large">Artiste apprenti</h2>
+                </div>
             </div>
-        </div>
-        <div class="gallery">
-            <div class="image-wrapper">
-                <img src="assets/images/least-1.jpg">
-                <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
+            <div class="grid-layout --layout-two-col">
+                <div class="grid-block --outline">
+                    <h2 class="--txt-large">École de la transition</h2>
+                </div>
+                <div class="grid-block --outline">
+                    <h2 class="--txt-large">Résidence</h2>
+                </div>
             </div>
-            <div class="image-wrapper">
-                <img src="assets/images/least-2.jpg">
-                <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
-            </div>
-            <div class="image-wrapper">
-                <img src="assets/images/least-3.jpg">
-                <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
-            </div>
-            <div class="image-wrapper">
-                <img src="assets/images/least-4.jpg">
-                <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
-            </div>
-            <div class="image-wrapper">
-                <img src="assets/images/least-5.jpg">
-                <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
-            </div>
-            <div class="image-wrapper">
-                <img src="assets/images/least-6.jpg">
-                <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
-            </div>
-            <div class="image-wrapper">
-                <img src="assets/images/least-7.jpg">
-                <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
-            </div>
-            <div class="image-wrapper">
-                <img src="assets/images/least-9.jpg">
-                <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
-            </div>
-            <div class="image-wrapper">
-                <img src="assets/images/least-10.jpg">
-                <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
-            </div>
-        </div>
-    </section>
-    <div class="backdrop-canvas">
+        </section>
+        <section id="colophon">
+            <p class="image-caption">2022 © least</p>
+            <p class="image-caption">Microbiological photos (details) from <a
+                    href="https://magical-contamination.tumblr.com/" target="_blank">Magical Contamination</a> © Antoine
+                Bridier-Nahmias</p>
+        </section>
+    </main>
+    <!-- <div class="backdrop-canvas">
         <canvas id="canvas"></canvas>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js"></script>
+    <script src="app.js"></script>
+    <script src="brush.js"></script> -->
     <script src="menu.js"></script>
-    <script src="slideshow.js"></script>
 </body>
