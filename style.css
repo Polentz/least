@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap');
+
 @font-face {
     font-family: "SpratCndBold";
     src: url("fonts/SpratCndBold.woff2") format("woff2"),
@@ -53,7 +55,7 @@
 body {
     position: relative;
     overflow-x: hidden;
-    font-family: "Space Grotesk", sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 100%;
     font-weight: 400;
     line-height: 1.3;
@@ -91,7 +93,7 @@ body {
 }
 
 .--txt-large {
-    font-family: "Space Grotesk", sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: 400;
     font-size: var(--txt-large);
     line-height: 1;
@@ -121,6 +123,19 @@ body {
 
 .--yellow {
     background: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 0, var(--yellow) 8rem, var(--yellow) calc(100% - 8rem), hsla(0, 0%, 100%, 0) 100%);
+}
+
+a::-moz-selection,
+p::-moz-selection,
+h1::-moz-selection,
+h2::-moz-selection,
+h3::-moz-selection,
+br::-moz-selection,
+div::-moz-selection,
+span::-moz-selection,
+em::-moz-selection {
+    background-color: var(--txt-color);
+    color: var(--bg-color);
 }
 
 a::-moz-selection,
@@ -444,7 +459,7 @@ button:focus {
 }
 
 .image-caption {
-    font-family: "Space Grotesk", sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: 400;
     font-size: var(--txt-copy-s);
 }
@@ -497,7 +512,7 @@ button:focus {
 }
 
 .button a {
-    font-family: "Space Grotesk", sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: 400;
     font-size: var(--txt-ui);
     line-height: 1;
