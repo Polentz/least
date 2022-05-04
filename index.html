@@ -13,12 +13,8 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-wrapper">
-            <h1 class="title">least</h1>
-            <h3 class="title">laboratoire écologie et art pour une société en transition</h3>
-        </div>
-    </header>
+    <span id="cursor"></span>
+
     <nav class="side-nav">
         <div class="menu-btn"></div>
         <span class="menu-trigger">Menu</span>
@@ -28,16 +24,38 @@
         <div class="menu">
             <div class="menu-wrapper">
                 <ul class="menu-col">
-                    <li class="menu-link"><a href="index.html">À propos</a></li>
+                    <li class="menu-link"><a class="js-scroll" data-target-section="about">À propos</a></li>
                     <li class="menu-link"><a href="pour-en-savoir-plus.html">Pour en savoir plus</a></li>
                     <li class="menu-link"><a href="programme-circulaire.html">Programme circulaire</a></li>
-                    <li class="menu-link"><a href="index.html#contact">Contact</a></li>
+                    <li class="menu-link"><a class="js-scroll" data-target-section="contact">Contact</a></li>
                 </ul>
             </div>
         </div>
         <div class="close-btn"></div>
     </nav>
-    <main class="content">
+
+    <section class="cover">
+        <div class="cover__bg"></div>
+        <div class="logo">
+            <h1><a class="js-scroll" data-target-section="about">Least</a></h1>
+            <h2>Laboratoire écologie et art pour une société en transition</h2>
+        </div>
+        <div class="arrow-down">
+            <svg width="22" height="33" viewBox="0 0 22 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 17L11 32L21 17" stroke="#1D1D1D" />
+                <path d="M11 32L11 -2.38419e-07" stroke="#1D1D1D" />
+            </svg>
+        </div>
+    </section>
+
+    <main class="content" id="about">
+        <header class="header">
+            <div class="header-wrapper">
+                <h1 class="title">least</h1>
+                <h3 class="title">laboratoire écologie et art pour une société en transition</h3>
+            </div>
+        </header>
+
         <section>
             <div class="grid-layout --layout-two-col">
                 <div class="grid-block --outline --has-drawing">
@@ -63,52 +81,15 @@
         </section>
 
         <section>
-            <div class="gallery-btn">
-                <a id="btn-left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.1 18.8">
-                        <rect x="1.1" y="8.7" width="14.9" height="1.5" />
-                        <polygon points="6.7,3.3 7.8,4.4 2.3,9.4 7.8,14.5 6.7,15.6 0.1,9.4" />
-                    </svg></a>
-                <a id="btn-right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.1 18.8">
-                        <rect x="0.1" y="8.8" width="14.9" height="1.5" />
-                        <polygon points="9.4,15.6 8.3,14.5 13.8,9.5 8.3,4.4 9.4,3.3 16,9.5" />
-                    </svg></a>
-            </div>
-            <div class="gallery">
-                <div class="image-wrapper">
-                    <img src="assets/images/least-1.jpg" width="100%">
-                    <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
+            <div class="grid-layout --layout-four-col">
+                <div class="--outline empty">
                 </div>
-                <div class="image-wrapper">
-                    <img src="assets/images/least-2.jpg" width="100%">
-                    <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
+                <div class="--outline">
+                    <img src="assets/dither-sample05.jpeg" width="100%" height="100%">
                 </div>
-                <div class="image-wrapper">
-                    <img src="assets/images/least-3.jpg" width="100%">
-                    <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
+                <div class="--outline empty">
                 </div>
-                <div class="image-wrapper">
-                    <img src="assets/images/least-4.jpg" width="100%">
-                    <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
-                </div>
-                <div class="image-wrapper">
-                    <img src="assets/images/least-5.jpg" width="100%">
-                    <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
-                </div>
-                <div class="image-wrapper">
-                    <img src="assets/images/least-6.jpg" width="100%">
-                    <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
-                </div>
-                <div class="image-wrapper">
-                    <img src="assets/images/least-7.jpg" width="100%">
-                    <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
-                </div>
-                <div class="image-wrapper">
-                    <img src="assets/images/least-9.jpg" width="100%">
-                    <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
-                </div>
-                <div class="image-wrapper">
-                    <img src="assets/images/least-10.jpg" width="100%">
-                    <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
+                <div class="--outline empty">
                 </div>
             </div>
         </section>
@@ -118,11 +99,11 @@
                 <div class="grid-block --outline">
                     <h2 class="--txt-large">Équipe</h2>
                 </div>
-                <div class="grid-block --outline hide-mobile">
+                <div class="grid-block --outline empty">
                 </div>
             </div>
             <div class="grid-layout --layout-two-col">
-                <div class="grid-block --outline --green">
+                <div class="grid-block --outline">
                     <p class="txt-copy-m">least est une association qui a été crée le 10 février 2021 et qui est
                         basée à Genève. Elle est composée de huit membres fondateurs.</p>
                     <div class="grid-item">
@@ -179,29 +160,56 @@
         </section>
 
         <section>
-            <div class="grid-layout --layout-four-col">
-                <div class="--outline">
-                </div>
-                <div class="--outline">
-                </div>
-                <div class="--outline">
-                    <img src="assets/dither-sample05.jpeg" width="100%" height="100%">
-                </div>
-                <div class="--outline">
-                </div>
+            <div class="gallery-btn">
+                <a id="btn-left">
+                    <svg width="33" height="22" viewBox="0 0 33 22" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 1L1 11L16 21" stroke="#1D1D1D" fill="none" />
+                        <path d="M1 11L33 11" stroke="#1D1D1D" fill="none" />
+                    </svg>
+                </a>
+                <a id="btn-right">
+                    <svg width="33" height="22" viewBox="0 0 33 22" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 21L32 11L17 0.999999" stroke="#1D1D1D" fill="none" />
+                        <path d="M32 11L-2.38419e-07 11" stroke="#1D1D1D" fill="none" />
+                    </svg>
+                </a>
             </div>
-        </section>
-
-        <section>
-            <div class="grid-layout --layout-four-col">
-                <div class="--outline">
-                    <img src="assets/dither-sample06.jpeg" width="100%" height="100%">
+            <div class="gallery">
+                <div class="image-wrapper">
+                    <img src="assets/images/least-1.jpg" width="100%">
+                    <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
                 </div>
-                <div class=" --outline">
+                <div class="image-wrapper">
+                    <img src="assets/images/least-2.jpg" width="100%">
+                    <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
                 </div>
-                <div class="--outline">
+                <div class="image-wrapper">
+                    <img src="assets/images/least-3.jpg" width="100%">
+                    <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
                 </div>
-                <div class="--outline">
+                <div class="image-wrapper">
+                    <img src="assets/images/least-4.jpg" width="100%">
+                    <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="assets/images/least-5.jpg" width="100%">
+                    <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="assets/images/least-6.jpg" width="100%">
+                    <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="assets/images/least-7.jpg" width="100%">
+                    <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="assets/images/least-9.jpg" width="100%">
+                    <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="assets/images/least-10.jpg" width="100%">
+                    <p class="image-caption">Didascalia dell’immagine. Lorem ipsum</p>
                 </div>
             </div>
         </section>
@@ -211,7 +219,7 @@
                 <div class="grid-block --outline">
                     <h2 class="--txt-large">Contact</h2>
                 </div>
-                <div class="grid-block --outline">
+                <div class="grid-block --outline empty">
                     <div>
                         <p>4, rue du Beulet</p>
                         <p>CH-1203 Genève</p>
@@ -221,15 +229,29 @@
             </div>
         </footer>
 
-        <section id="colophon">
+        <section>
+            <div class="grid-layout --layout-four-col">
+                <div class="--outline">
+                    <img src="assets/dither-sample06.jpeg" width="100%" height="100%">
+                </div>
+                <div class=" --outline empty">
+                </div>
+                <div class="--outline empty">
+                </div>
+                <div class="--outline empty">
+                </div>
+            </div>
+        </section>
+
+        <section class="colophon">
             <p class="image-caption">2022 © least</p>
             <p class="image-caption">Microbiological photos (details) from <a
                     href="https://magical-contamination.tumblr.com/" target="_blank">Magical Contamination</a> © Antoine
                 Bridier-Nahmias</p>
         </section>
     </main>
-
+    <script src="cursor.js"></script>
     <script src="menu.js"></script>
     <script src="slide.js"></script>
-
+    <script src="home.js"></script>
 </body>

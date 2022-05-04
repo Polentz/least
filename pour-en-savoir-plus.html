@@ -13,12 +13,8 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-wrapper">
-            <h1 class="title">least</h1>
-            <h3 class="title">laboratoire écologie et art pour une société en transition</h3>
-        </div>
-    </header>
+    <span id="cursor"></span>
+
     <nav class="side-nav">
         <div class="menu-btn"></div>
         <span class="menu-trigger">Menu</span>
@@ -28,7 +24,7 @@
         <div class="menu">
             <div class="menu-wrapper">
                 <ul class="menu-col">
-                    <li class="menu-link"><a href="index.html">À propos</a></li>
+                    <li class="menu-link"><a href="index.html#about">À propos</a></li>
                     <li class="menu-link"><a href="pour-en-savoir-plus.html">Pour en savoir plus</a></li>
                     <li class="menu-link"><a href="programme-circulaire.html">Programme circulaire</a></li>
                     <li class="menu-link"><a href="index.html#contact">Contact</a></li>
@@ -39,6 +35,13 @@
     </nav>
 
     <main class="content">
+        <header class="header">
+            <div class="header-wrapper">
+                <h1 class="title">least</h1>
+                <h3 class="title">laboratoire écologie et art pour une société en transition</h3>
+            </div>
+        </header>
+
         <section>
             <div class="grid-layout --layout-two-col">
                 <div class="grid-block --outline">
@@ -72,20 +75,20 @@
 
         <section>
             <div class="grid-layout --layout-four-col">
-                <div class="--outline">
+                <div class="--outline empty">
                 </div>
                 <div class="--outline">
                     <img src="assets/dither-sample03.jpeg" width="100%" height="100%">
                 </div>
-                <div class="--outline">
+                <div class="--outline empty">
                 </div>
-                <div class="--outline">
+                <div class="--outline empty">
                 </div>
             </div>
         </section>
 
         <section>
-            <div class="grid-layout --layout-two-col order-mobile">
+            <div class="grid-layout --layout-two-col change-order">
                 <div class="grid-block --outline">
                     <div class="grid-item">
                         <h3>least: arts et sciences au service du changement</h3>
@@ -190,19 +193,19 @@
 
         <section>
             <div class="grid-layout --layout-four-col">
-                <div class="--outline">
+                <div class="--outline empty">
                 </div>
-                <div class="--outline">
+                <div class="--outline empty">
                 </div>
-                <div class="--outline">
+                <div class="--outline empty">
                     <img src="assets/dither-sample04.jpeg" width="100%" height="100%">
                 </div>
-                <div class="--outline">
+                <div class="--outline empty">
                 </div>
             </div>
         </section>
 
-        <section id="colophon">
+        <section class="colophon">
             <p class="image-caption">2022 © least</p>
             <p class="image-caption">Microbiological photos (details) from <a
                     href="https://magical-contamination.tumblr.com/" target="_blank">Magical Contamination</a> © Antoine
@@ -211,5 +214,6 @@
     </main>
 
     <script src="menu.js"></script>
+    <script src="cursor.js"></script>
 
 </body>

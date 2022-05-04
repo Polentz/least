@@ -4,7 +4,7 @@ const menu = document.querySelector(".menu");
 const menuLabel = document.querySelector(".menu-trigger");
 const langBtn = document.querySelector(".lang a");
 const body = document.querySelector("body");
-const linkMenu = document.querySelectorAll(".menu-link a");
+const menuLinks = document.querySelectorAll(".menu-link a");
 
 openMenu.addEventListener("click", () => {
     openMenu.classList.add("scale");
@@ -35,30 +35,38 @@ closeMenu.addEventListener("click", () => {
         menuLabel.classList.remove("change");
         menuLabel.innerHTML = "Menu";
         langBtn.style.color = "var(--txt-color)";
-    }, 800);
+    }, 600);
 });
 
-linkMenu.forEach(link => {
+menuLinks.forEach(link => {
     link.addEventListener("click", (event) => {
         event.preventDefault();
+
         openMenu.classList.remove("scale");
         menu.classList.remove("open");
         closeMenu.classList.remove("visible");
+
         setTimeout(() => {
             body.style.overflowY = "scroll";
         }, 200);
-        const url = link.getAttribute("href");
+
         setTimeout(() => {
             menuLabel.classList.remove("change");
             menuLabel.innerHTML = "Menu";
             langBtn.style.color = "var(--txt-color)";
+        }, 600);
+
+        if (link.hasAttribute("href")) {
+            const url = link.getAttribute("href");
             document.location.href = url;
-        }, 800);
+        } else {
+            return true;
+        }
     });
 });
 
 let lastAssignedColor;
-linkMenu.forEach(link => {
+menuLinks.forEach(link => {
     link.addEventListener("mouseenter", () => {
         let hoverColors = ["var(--green)", "var(--purple)", "var(--blue)", "var(--yellow)"];
         let randomIndex = Math.floor(Math.random() * hoverColors.length);

@@ -13,12 +13,8 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-wrapper">
-            <h1 class="title">least</h1>
-            <h3 class="title">laboratoire écologie et art pour une société en transition</h3>
-        </div>
-    </header>
+    <span id="cursor"></span>
+
     <nav class="side-nav">
         <div class="menu-btn"></div>
         <span class="menu-trigger">Menu</span>
@@ -28,7 +24,7 @@
         <div class="menu">
             <div class="menu-wrapper">
                 <ul class="menu-col">
-                    <li class="menu-link"><a href="index.html">À propos</a></li>
+                    <li class="menu-link"><a href="index.html#about">À propos</a></li>
                     <li class="menu-link"><a href="pour-en-savoir-plus.html">Pour en savoir plus</a></li>
                     <li class="menu-link"><a href="programme-circulaire.html">Programme circulaire</a></li>
                     <li class="menu-link"><a href="index.html#contact">Contact</a></li>
@@ -39,6 +35,13 @@
     </nav>
 
     <main class="content">
+        <header class="header">
+            <div class="header-wrapper">
+                <h1 class="title">least</h1>
+                <h3 class="title">laboratoire écologie et art pour une société en transition</h3>
+            </div>
+        </header>
+
         <section>
             <div class="grid-layout --layout-two-col">
                 <div class="grid-block --outline">
@@ -75,7 +78,7 @@
             </div>
         </section>
 
-        <section id="colophon">
+        <section class="colophon">
             <p class="image-caption">2022 © least</p>
             <p class="image-caption">Microbiological photos (details) from <a
                     href="https://magical-contamination.tumblr.com/" target="_blank">Magical Contamination</a> © Antoine
@@ -84,5 +87,5 @@
     </main>
 
     <script src="menu.js"></script>
-
+    <script src="cursor.js"></script>
 </body>
