@@ -16,18 +16,6 @@ logo.addEventListener("mouseleave", () => {
     logoUI.style.opacity = 0;
 });
 
-// const links = document.querySelectorAll(".js-link");
-// links.forEach(link => {
-//     link.addEventListener("click", (event) => {
-//         event.preventDefault();
-//         const href = link.getAttribute("href");
-//         document.querySelector(href).scrollIntoView({
-//             behavior: "smooth"
-//         });
-//     });
-// });
-
-
 const pageLinks = [...document.querySelectorAll(".js-scroll")];
 function scrollToSection(e) {
     const targetSection = document.getElementById(e.target.dataset.targetSection);

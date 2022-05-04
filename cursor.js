@@ -29,8 +29,8 @@ allLinks.forEach(link => {
         cursor.style.filter = "blur(2px)"
     });
     link.addEventListener("mouseleave", () => {
-        cursor.style.width = 16 + "px";
-        cursor.style.height = 16 + "px";
+        cursor.style.width = 10 + "px";
+        cursor.style.height = 10 + "px";
         cursor.style.filter = "none"
     });
 });
