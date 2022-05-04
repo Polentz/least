@@ -372,7 +372,6 @@ div::selection {
     font-family: "SpratCndBold", serif;
     font-size: calc(12vw + 2rem);
     line-height: 1;
-    padding: 0 16px;
     text-align: center;
     text-transform: lowercase;
 }
@@ -407,9 +406,12 @@ div::selection {
     transition: opacity .5s .3s ease;
 }
 
+.arrow-down svg {
+    stroke: var(--txt-color);
+}
+
 #about {
     margin-top: 1px;
-    z-index: 5;
 }
 
 .header {
@@ -678,6 +680,27 @@ div::selection {
 
     .menu-link a {
         font-size: 12vw;
+    }
+
+    .logo {
+        top: var(--sn-large);
+        transform: translate(-50%, 0%);
+    }
+
+    .logo h2 {
+        opacity: 1;
+        white-space: break-spaces;
+        font-size: 1rem;
+    }
+
+    .logo a {
+        -webkit-text-stroke: 1px var(--txt-color);
+        color: transparent;
+    }
+
+    .arrow-down {
+        opacity: 1;
+        bottom: var(--sn-large);
     }
 
     .header {
