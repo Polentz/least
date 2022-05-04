@@ -674,6 +674,10 @@ div::selection {
         --marg-s: 16px;
     }
 
+    .cover {
+        display: none;
+    }
+
     .menu {
         padding-left: var(--sn-large);
     }
