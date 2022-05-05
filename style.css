@@ -54,6 +54,8 @@
 }
 
 :root {
+    --doc-height: 100%;
+
     --bg-color: #fff;
     --txt-color: #1d1d1d;
 
@@ -280,7 +282,7 @@ div::selection {
 
 .menu {
     width: 100vw;
-    height: 100vh;
+    height: var(--doc-height);
     position: fixed;
     top: 0;
     left: 0;
@@ -341,7 +343,7 @@ div::selection {
 .cover {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: var(--doc-height);
     overflow: hidden;
     z-index: 3;
     outline: var(--border);
@@ -519,7 +521,7 @@ div::selection {
     gap: 2rem;
     width: auto;
     overflow: scroll;
-    padding: var(--marg-s) var(--marg-s) 0 var(--marg-s);
+    padding: var(--marg-s);
 }
 
 .gallery::-webkit-scrollbar {
