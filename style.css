@@ -363,7 +363,7 @@ div::selection {
 
 .logo {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -399,15 +399,25 @@ div::selection {
 
 .arrow-down {
     position: absolute;
-    bottom: var(--tn-large);
+    bottom: var(--sn-large);
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity .5s .3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 }
 
 .arrow-down svg {
     stroke: var(--txt-color);
+}
+
+.arrow-down p {
+    text-transform: uppercase;
+    font-size: var(--txt-ui);
+    text-align: center;
 }
 
 #about {
