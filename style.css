@@ -73,8 +73,8 @@
     --txt-copy-s: .8rem;
     --txt-ui: .8rem;
 
-    --marg-s: 24px;
-    --marg-m: 48px;
+    --marg-s: 2rem;
+    --marg-m: 4rem;
 
     --border: solid 1px var(--txt-color);
 }
@@ -278,6 +278,7 @@ div::selection {
 
 .menu-trigger.change {
     color: var(--bg-color);
+    z-index: 4;
 }
 
 .menu {
@@ -340,6 +341,15 @@ div::selection {
     opacity: 1;
 }
 
+.cover,
+.cover__bg {
+    background-image: url("assets/images/bg-cover02.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 .cover {
     position: relative;
     width: 100vw;
@@ -347,6 +357,7 @@ div::selection {
     overflow: hidden;
     z-index: 3;
     outline: var(--border);
+
 }
 
 .cover__bg {
@@ -355,11 +366,6 @@ div::selection {
     left: -30px;
     width: 130%;
     height: 130%;
-    background-image: url("assets/images/bg-cover02.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     animation: float 8s linear infinite;
 }
 
@@ -372,7 +378,7 @@ div::selection {
 
 .logo h1 {
     font-family: "SpratCndBold", serif;
-    font-size: calc(12vw + 2rem);
+    font-size: calc(12vw + 4rem);
     line-height: 1;
     text-align: center;
     text-transform: lowercase;
@@ -390,7 +396,8 @@ div::selection {
 }
 
 .logo h2 {
-    font-size: 1.2rem;
+    font-family: "SpratCndBold", serif;
+    font-size: 1.3rem;
     text-align: center;
     white-space: nowrap;
     text-transform: lowercase;
@@ -631,6 +638,10 @@ div::selection {
 }
 
 @media screen and (max-width: 910px) {
+    .logo h2 {
+        white-space: break-spaces;
+    }
+
     .header {
         padding: 0 var(--marg-s);
     }
@@ -650,7 +661,6 @@ div::selection {
     }
 
     .gallery {
-        padding: 0;
         margin-left: -1px;
     }
 
@@ -668,6 +678,14 @@ div::selection {
 
     .change-order {
         flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .header-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
     }
 }
 
@@ -694,6 +712,13 @@ div::selection {
         padding-left: var(--sn-large);
     }
 
+    .menu.open {
+        background-image: url("assets/images/bg-cover02.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
     .menu-link a {
         font-size: 12vw;
     }
@@ -705,7 +730,6 @@ div::selection {
 
     .logo h2 {
         opacity: 1;
-        white-space: break-spaces;
         font-size: 1rem;
     }
 
@@ -721,12 +745,6 @@ div::selection {
 
     .header {
         background: var(--bg-color);
-    }
-
-    .header-wrapper {
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: flex-start;
     }
 
     .--green {
@@ -753,8 +771,15 @@ div::selection {
         margin-bottom: -4px;
     }
 
-    #btn-left,
-    #btn-right {
+    .grid-block {
+        padding-top: var(--marg-m);
+    }
+
+    .gallery {
+        padding: 0;
+    }
+
+    .gallery-btn {
         display: none;
     }
 
