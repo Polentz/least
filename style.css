@@ -44,6 +44,50 @@
     }
 }
 
+@keyframes fadeInOut {
+    0% {
+        opacity: 1;
+    }
+
+    17% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    92% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeInOut {
+    0% {
+        opacity: 1;
+    }
+
+    17% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    92% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -265,6 +309,7 @@ div::selection {
 }
 
 .menu-trigger {
+    display: none;
     position: absolute;
     top: 55%;
     transform: rotate(180deg);
@@ -341,14 +386,14 @@ div::selection {
     opacity: 1;
 }
 
-.cover,
+/* .cover,
 .cover__bg {
     background-image: url("assets/images/bg-cover02.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
+} */
 
 .cover {
     position: relative;
@@ -357,7 +402,6 @@ div::selection {
     overflow: hidden;
     z-index: 3;
     outline: var(--border);
-
 }
 
 .cover__bg {
@@ -366,8 +410,41 @@ div::selection {
     left: -30px;
     width: 130%;
     height: 130%;
+    will-change: transform;
     animation: float 8s linear infinite;
 }
+
+.cover__bg img {
+    position: absolute;
+    left: 0;
+    will-change: opacity;
+    transition: opacity 1s ease-in-out;
+    animation: fadeInOut 20s infinite ease-in-out;
+    /* animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 20s; */
+}
+
+.cover__bg img:nth-of-type(1) {
+    animation-delay: 16s;
+}
+
+.cover__bg img:nth-of-type(2) {
+    animation-delay: 12s;
+}
+
+.cover__bg img:nth-of-type(3) {
+    animation-delay: 8s;
+}
+
+.cover__bg img:nth-of-type(4) {
+    animation-delay: 4s;
+}
+
+.cover__bg img:nth-of-type(5) {
+    animation-delay: 0;
+}
+
 
 .logo {
     position: absolute;
@@ -385,14 +462,17 @@ div::selection {
 }
 
 .logo a {
-    color: var(--txt-color);
+    /* color: var(--bg-color); */
+    -webkit-text-stroke: 1px var(--txt-color);
+    color: transparent;
     transition: color .5s ease;
     cursor: pointer;
 }
 
 .logo a:hover {
-    -webkit-text-stroke: 1px var(--txt-color);
-    color: transparent;
+    /* -webkit-text-stroke: 1px var(--txt-color);
+    color: transparent; */
+    color: var(--txt-color);
 }
 
 .logo h2 {
@@ -776,7 +856,7 @@ div::selection {
     }
 
     .gallery {
-        padding: 0;
+        padding: var(--marg-m) 0 0 0;
     }
 
     .gallery-btn {
