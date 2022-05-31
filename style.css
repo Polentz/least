@@ -1,3 +1,13 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translateZ(0);
+}
+
 @font-face {
     font-family: "SpratCndBold";
     src: url("fonts/SpratCndBold.woff2") format("woff2"),
@@ -98,14 +108,7 @@
     }
 }
 
-* {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    text-rendering: geometricPrecision;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+
 
 :root {
     --doc-height: 100%;
@@ -426,6 +429,7 @@ div::selection {
     left: -30px;
     width: 130%;
     height: 130%;
+    transform: translateZ(0);
     will-change: transform;
     animation: float 6s infinite linear alternate-reverse;
 }
