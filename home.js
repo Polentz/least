@@ -4,14 +4,14 @@ const logoUI = document.querySelector(".arrow-down");
 
 
 logo.addEventListener("mouseenter", () => {
-    cursor.style.width = 200 + "px";
-    cursor.style.height = 200 + "px";
+    // cursor.style.width = 200 + "px";
+    // cursor.style.height = 200 + "px";
     logoText.style.opacity = 1;
     logoUI.style.opacity = 1;
 });
 logo.addEventListener("mouseleave", () => {
-    cursor.style.width = 10 + "px";
-    cursor.style.height = 10 + "px";
+    // cursor.style.width = 10 + "px";
+    // cursor.style.height = 10 + "px";
     logoText.style.opacity = 0;
     logoUI.style.opacity = 0;
 });

@@ -6,19 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>least</title>
-    <link rel="stylesheet" href="style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="base.css">
 </head>
 
 <body>
     <span id="cursor"></span>
 
+    <section class="cover">
+        <div class="cover__color"></div>
+        <div class="cover__bg"></div>
+        <div class="logo">
+            <h1><a class="js-scroll" data-target-section="a-propos">Least</a></h1>
+            <h2>Laboratoire écologie et art pour une société en transition</h2>
+        </div>
+        <div class="arrow-down">
+            <p class="--txt-ui">Cliquer pour<br>faire défiler</p>
+            <svg width="22" height="33" viewBox="0 0 22 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 17L11 32L21 17" />
+                <path d="M11 32L11 -2.38419e-07" />
+            </svg>
+        </div>
+    </section>
+
     <nav class="side-nav">
         <div class="menu-btn"></div>
         <span class="menu-trigger"></span>
-        <div class="lang">
+        <div class="lang --txt-small">
             <a href="en/index.html">english</a>
         </div>
         <div class="menu">
@@ -39,51 +58,28 @@
         </div>
     </nav>
 
-    <section class="cover">
-        <!-- <div class="cover__bg"></div> -->
-        <div class="cover__bg">
-            <div class="cover__bg--01"></div>
-            <div class="cover__bg--02"></div>
-            <div class="cover__bg--03"></div>
-            <div class="cover__bg--05"></div>
-            <div class="cover__bg--04"></div>
-        </div>
-        <div class="logo">
-            <h1><a class="js-scroll" data-target-section="a-propos">Least</a></h1>
-            <h2>Laboratoire écologie et art pour une société en transition</h2>
-        </div>
-        <div class="arrow-down">
-            <p>Click<br>to scroll</p>
-            <svg width="22" height="33" viewBox="0 0 22 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 17L11 32L21 17" />
-                <path d="M11 32L11 -2.38419e-07" />
-            </svg>
-        </div>
-    </section>
-
     <main class="content" id="a-propos">
         <header class="header">
             <div class="header-wrapper">
-                <h1 class="title">least</h1>
-                <h3 class="title">laboratoire écologie et art pour une société en transition</h3>
+                <p class="site-title">least</p>
+                <p class="site-title">laboratoire écologie et art pour une société en transition</p>
             </div>
         </header>
 
         <section>
             <div class="grid-layout --layout-two-col">
                 <div class="grid-block --outline">
-                    <h2 class="--txt-large">À propos</h2>
+                    <h2 class="--title-large">À propos</h2>
                 </div>
                 <div class="grid-block --outline --blue">
-                    <p class="txt-copy-m">least initie et accompagne des démarches artistiques, écologiques, sociales et
-                        scientifiques participatives, dont l’objectif est d’activer la conscience collective et la
+                    <p class="--txt-medium">least initie et accompagne des démarches artistiques, écologiques, sociales
+                        et scientifiques participatives, dont l’objectif est d’activer la conscience collective et la
                         résilience de notre écosystème, par la mise en commun de savoirs. Réunissant des expertes et des
                         artistes, les projets seront co-créés avec des groupes locaux (associations, écoles, habitantes,
-                        …).
-                    </p>
-                    <p>Le programme se décline en quatre volets: les projets co-créatifs et inclusifs, la formation
-                        continue des jeunes artistes, une école de la transition, populaire et nomade et des résidences
-                        de recherche en Suisse et dans le Sud de l’Europe.</p>
+                        …).</p>
+                    <p class="--txt-small">Le programme se décline en quatre volets: les projets co-créatifs et
+                        inclusifs, la formation continue des jeunes artistes, une école de la transition, populaire et
+                        nomade et des résidences de recherche en Suisse et dans le Sud de l’Europe.</p>
                     <div class="button-wrapper">
                         <button class="button">
                             <span><a href="pour-en-savoir-plus.html">Pour en savoir plus</a></span>
@@ -98,7 +94,7 @@
                 <div class="--outline empty">
                 </div>
                 <div class="--outline">
-                    <img src="assets/dither-sample05.jpeg" width="100%" height="100%">
+                    <img src="assets/blue-color-square.jpg" width="100%" height="100%">
                 </div>
                 <div class="--outline empty">
                 </div>
@@ -110,61 +106,68 @@
         <section>
             <div class="grid-layout --layout-two-col">
                 <div class="grid-block --outline">
-                    <h2 class="--txt-large">Équipe</h2>
+                    <h2 class="--title-large">Équipe</h2>
                 </div>
                 <div class="grid-block --outline empty">
                 </div>
             </div>
             <div class="grid-layout --layout-two-col">
                 <div class="grid-block --outline">
-                    <p class="txt-copy-m">Huit personnes sont à l’origine de least, de sa conception, de sa mission, de
-                        son programme et de son fonctionnement.</p>
+                    <p class="--txt-medium">Huit personnes sont à l’origine de least, de sa conception, de sa mission,
+                        de son programme et de son fonctionnement.</p>
                     <div class="grid-item">
-                        <p>Ensemble, ils définissent les appels à projets, élaborent les réflexions communes sur les
-                            thèmes abordés, accompagnent la mise en œuvre et le développement de chaque initiative. Ils
-                            engagent l’équipe opérationnelle.</p>
-                        <p>least est une association qui a été crée le 10 février 2021 et qui est basée à Genève.</p>
+                        <p class="--txt-small">Ensemble, ils définissent les appels à projets, élaborent les réflexions
+                            communes sur les thèmes abordés, accompagnent la mise en œuvre et le développement de chaque
+                            initiative. Ils engagent l’équipe opérationnelle. least est une association qui a été crée
+                            le 10 février 2021 et qui est basée à Genève.</p>
                     </div>
                 </div>
                 <div class="grid-block --outline">
                     <div class="grid-item">
-                        <h3>Vincent Barras</h3>
-                        <p>Directeur de l’Institut des humanités en médecine et professeur d’histoire de la médecine
-                            et des sciences (UNIL-CHUV), performeur, auteur.</p>
+                        <h3 class="--title-small">Vincent Barras</h3>
+                        <p class="--txt-small">Directeur de l’Institut des humanités en médecine et professeur
+                            d’histoire de la médecine et des sciences (UNIL-CHUV), performeur, auteur.</p>
                     </div>
                     <div class="grid-item">
-                        <h3>Tony Berrada</h3>
-                        <p>Professeur de finance UNIGE et directeur du Geneva Finance Research Institute.</p>
+                        <h3 class="--title-small">Tony Berrada</h3>
+                        <p class="--txt-small">Professeur de finance UNIGE et directeur du Geneva Finance Research
+                            Institute.</p>
                     </div>
                     <div class="grid-item">
-                        <h3>Claire de Ribaupierre</h3>
-                        <p>Docteur ès Lettres, spécialisée dans le domaine de l’anthropologie, dramaturge, co-créatrice
+                        <h3 class="--title-small">Claire de Ribaupierre</h3>
+                        <p class="--txt-small">Docteur ès Lettres, spécialisée dans le domaine de l’anthropologie,
+                            dramaturge, co-créatrice
                             de projets artistiques.</p>
                     </div>
                     <div class="grid-item">
-                        <h3>Alexander Federau</h3>
-                        <p>Docteur en philosophie de l’écologie, titulaire d’un diplôme en physique EPFZ, engagé depuis
+                        <h3 class="--title-small">Alexander Federau</h3>
+                        <p class="--txt-small">Docteur en philosophie de l’écologie, titulaire d’un diplôme en physique
+                            EPFZ, engagé depuis
                             de nombreuses années sur les questions environnementales.</p>
                     </div>
 
                     <div class="grid-item">
-                        <h3>Rodrigo Fernandez</h3>
-                        <p>Docteur en ingénierie des matériaux EPFL, co-fondateur de Terrabloc (lauréat du Prix Sud
+                        <h3 class="--title-small">Rodrigo Fernandez</h3>
+                        <p class="--txt-small">Docteur en ingénierie des matériaux EPFL, co-fondateur de Terrabloc
+                            (lauréat du Prix Sud
                             2019, start-up durable).</p>
                     </div>
                     <div class="grid-item">
-                        <h3>Véronique Ferrero Delacoste</h3>
-                        <p>Curatrice spécialisée dans le domaine des arts vivants, titulaire d’un Master Art in the
+                        <h3 class="--title-small">Véronique Ferrero Delacoste</h3>
+                        <p class="--txt-small">Curatrice spécialisée dans le domaine des arts vivants, titulaire d’un
+                            Master Art in the
                             public sphere, directrice de projets artistiques, participatifs et co-créatifs.</p>
                     </div>
                     <div class="grid-item">
-                        <h3>Adina Secretan</h3>
-                        <p>Chorégraphe, metteuse en scène, titulaire d’un Master en philosophie, porteuse de projets
+                        <h3 class="--title-small">Adina Secretan</h3>
+                        <p class="--txt-small">Chorégraphe, metteuse en scène, titulaire d’un Master en philosophie,
+                            porteuse de projets
                             artistiques sociaux et communautaires.</p>
                     </div>
                     <div class="grid-item">
-                        <h3>Laurent de Wurstemberger</h3>
-                        <p>Architecte AAM, fondateur de l’atelier d’architecture LDW, co-fondateur de Terrabloc (lauréat
+                        <h3 class="--title-small">Laurent de Wurstemberger</h3>
+                        <p class="--txt-small">Architecte AAM, fondateur de l’atelier d’architecture LDW, co-fondateur
+                            de Terrabloc (lauréat
                             du Prix Sud 2019, start-up durable).</p>
                     </div>
                 </div>
@@ -189,80 +192,80 @@
             <div class="gallery">
                 <div class="image-wrapper">
                     <img src="assets/images/least-2.jpg" width="100%">
-                    <p class="image-caption">Common Dreams : Flotation School_Maria Lucia Cruz Correia©Maria Lucia Cruz
+                    <p class="--txt-caption">Common Dreams : Flotation School_Maria Lucia Cruz Correia©Maria Lucia Cruz
                         Correia</p>
                 </div>
                 <div class="image-wrapper">
                     <img src="assets/images/least-1.jpg" width="100%">
-                    <p class="image-caption">Common Dreams : Flotation School_Maria Lucia Cruz Correia©Maria Lucia Cruz
+                    <p class="--txt-caption">Common Dreams : Flotation School_Maria Lucia Cruz Correia©Maria Lucia Cruz
                         Correia</p>
                 </div>
                 <div class="image-wrapper">
                     <img src="assets/images/least-3.jpg" width="100%">
-                    <p class="image-caption">Common Dreams : Flotation School_Maria Lucia Cruz Correia©Maria Lucia Cruz
+                    <p class="--txt-caption">Common Dreams : Flotation School_Maria Lucia Cruz Correia©Maria Lucia Cruz
                         Correia</p>
                 </div>
                 <div class="image-wrapper">
                     <img src="assets/images/least-5.jpg" width="100%">
-                    <p class="image-caption">Natural Contract Lab_Maria Lucia Cruz Correia ©Maria Lucia Cruz Correia</p>
+                    <p class="--txt-caption">Natural Contract Lab_Maria Lucia Cruz Correia ©Maria Lucia Cruz Correia</p>
                 </div>
                 <div class="image-wrapper">
                     <img src="assets/images/NCL@MarkPozlep.jpeg" width="100%">
-                    <p class="image-caption">Natural Contract Lab_Maria Lucia Cruz Correia ©Mark Pozlep</p>
+                    <p class="--txt-caption">Natural Contract Lab_Maria Lucia Cruz Correia ©Mark Pozlep</p>
                 </div>
                 <div class="image-wrapper">
                     <img src="assets/images/QuatreHectares-Anna Rispoli&BrittHatzius.jpeg" width="100%">
-                    <p class="image-caption">Quatre hectares_Anna Rispoli&Britt Hatzius©Arya Dil</p>
+                    <p class="--txt-caption">Quatre hectares_Anna Rispoli&Britt Hatzius©Arya Dil</p>
                 </div>
                 <div class="image-wrapper">
                     <img src="assets/images/least-6.jpg" width="100%">
-                    <p class="image-caption">Résidence Val d’Illiez©Eliott Croubalian</p>
+                    <p class="--txt-caption">Résidence Val d’Illiez©Eliott Croubalian</p>
                 </div>
                 <div class="image-wrapper">
                     <img src="assets/images/NWWT-Amsterdam©MammalianDivingReflex.jpeg" width="100%">
-                    <p class="image-caption">Natural Contract Lab_Maria Lucia Cruz Correia ©Maria Lucia Cruz Correia
+                    <p class="--txt-caption">Natural Contract Lab_Maria Lucia Cruz Correia ©Maria Lucia Cruz Correia
                         Quatre hectares_Anna Rispoli&Britt Hatzius©Arya Dil
                         Nightwalks with teenagers_Mammalian Diving Reflex ©Mammalian Diving Reflex</p>
                 </div>
                 <div class="image-wrapper --vertical">
                     <img src="assets/images/least-8.jpg">
-                    <p class="image-caption">Prenez racines ! - Malik_Thierry Boutonnier©Thierry Boutonnier</p>
+                    <p class="--txt-caption">Prenez racines ! - Malik_Thierry Boutonnier©Thierry Boutonnier</p>
                 </div>
                 <div class="image-wrapper">
                     <img src="assets/images/least-4.jpg" width="100%">
-                    <p class="image-caption">Appel d’air_Thierry Boutonnier©Julie Bourges</p>
+                    <p class="--txt-caption">Appel d’air_Thierry Boutonnier©Julie Bourges</p>
                 </div>
                 <div class="image-wrapper">
                     <img src="assets/images/SexAndDeath©SamaraHersch.jpeg" width="100%">
-                    <p class="image-caption">Sex and Death (and the Internet)_Samara Hersch ©Ponch Hawkes</p>
+                    <p class="--txt-caption">Sex and Death (and the Internet)_Samara Hersch ©Ponch Hawkes</p>
                 </div>
             </div>
         </section>
 
-        <footer id="contact">
+        <section id="contact">
             <div class="grid-layout --layout-two-col">
                 <div class="grid-block --outline">
-                    <h2 class="--txt-large">Contact</h2>
+                    <h2 class="--title-large">Contact</h2>
                 </div>
                 <div class="grid-block --outline">
                     <div>
-                        <p class="title">least</p>
-                        <p>4, rue du Beulet</p>
-                        <p>CH-1203 Genève</p>
-                        <a href="mailto:contact@least.eco">contact@least.eco</a>
+                        <p class="site-title">least</p>
+                        <p class="--txt-small">4, rue du Beulet</p>
+                        <p class="--txt-small">CH-1203 Genève</p>
+                        <p class="--txt-small"><a href="mailto:contact@least.eco">contact@least.eco</a></p>
                     </div>
                 </div>
             </div>
-        </footer>
+        </section>
 
         <section>
             <div class="grid-layout --layout-four-col">
-                <div class="--outline">
-                    <img src="assets/dither-sample06.jpeg" width="100%" height="100%">
-                </div>
                 <div class=" --outline empty">
                 </div>
                 <div class="--outline empty">
+                </div>
+                <div class="--outline">
+                    <img src="assets/green-overlay-square.jpg" width="100%" height="100%">
                 </div>
                 <div class="--outline empty">
                 </div>
@@ -270,12 +273,10 @@
         </section>
 
         <section class="colophon">
-            <p class="image-caption">2022 © least</p>
-            <p class="image-caption">Photos microbiologiques (détails) de <a
-                    href="https://magical-contamination.tumblr.com/" target="_blank">Magical Contamination</a> © Antoine
-                Bridier-Nahmias</p>
+            <p class="--txt-caption">2022 © least</p>
         </section>
     </main>
+
     <script src="cursor.js"></script>
     <script src="menu.js"></script>
     <script src="slide.js"></script>

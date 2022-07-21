@@ -24,14 +24,14 @@ document.addEventListener("mousemove", (event) => {
 
 allLinks.forEach(link => {
     link.addEventListener("mouseenter", () => {
-        cursor.style.width = 96 + "px";
-        cursor.style.height = 96 + "px";
-        cursor.style.filter = "blur(2px)"
+        cursor.style.width = 112 + "px";
+        cursor.style.height = 112 + "px";
+        // cursor.style.filter = "blur(2px)";
     });
     link.addEventListener("mouseleave", () => {
         cursor.style.width = 10 + "px";
         cursor.style.height = 10 + "px";
-        cursor.style.filter = "none"
+        // cursor.style.filter = "none"
     });
 });
 
