@@ -11,6 +11,7 @@ documentHeight()
 
 const cursor = document.getElementById("cursor");
 const allLinks = document.querySelectorAll("a, .menu-btn, .close-btn");
+// const squareImages = document.querySelectorAll(".--square");
 
 document.addEventListener("mousemove", (event) => {
     let x = event.pageX;
@@ -33,6 +34,20 @@ allLinks.forEach(link => {
         cursor.style.height = 10 + "px";
     });
 });
+
+// squareImages.forEach(element => {
+//     let width = element.clientWidth;
+//     let height = element.clientHeight;
+
+//     element.addEventListener("mouseenter", () => {
+//         cursor.style.width = width + "px";
+//         cursor.style.height = height + "px";
+//     });
+//     element.addEventListener("mouseleave", () => {
+//         cursor.style.width = 10 + "px";
+//         cursor.style.height = 10 + "px";
+//     });
+// });
 
 // menu
 
@@ -125,9 +140,9 @@ const btnLeft = document.getElementById("btn-left");
 const btnRight = document.getElementById("btn-right");
 const scrollContainer = document.querySelector(".gallery");
 const images = document.querySelectorAll(".gallery img");
-const distance = window.screen.width / 2;
+const distance = screen.width / 2;
 
-if (btnLeft) {
+if (scrollContainer) {
     btnLeft.addEventListener("click", () => {
         scrollContainer.scrollBy({
             left: -distance,
@@ -140,11 +155,8 @@ if (btnLeft) {
             images.forEach(image => {
                 image.style.filter = "grayscale(1)"
             });
-        })
+        });
     })
-}
-
-if (btnRight) {
     btnRight.addEventListener("click", () => {
         scrollContainer.scrollBy({
             left: distance,
@@ -157,7 +169,7 @@ if (btnRight) {
             images.forEach(image => {
                 image.style.filter = "grayscale(1)";
             });
-        })
+        });
     });
 }
 
