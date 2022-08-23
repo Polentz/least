@@ -59,6 +59,7 @@
 
     --bg-color: #fff;
     --txt-color: #1d1d1d;
+    --acc-color: #dbdbdb;
     /* --green: #b7e3a3;
     --purple: #d0bbff;
     --blue: #bbcce8;
@@ -872,6 +873,10 @@ a:visited {
     /* #contact .grid-block {
         height: auto;
     } */
+
+    .contact--block {
+        max-width: 100%;
+    }
 
     .colophon {
         flex-direction: column;
