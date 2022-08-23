@@ -181,8 +181,8 @@ i::-moz-selection,
 u::-moz-selection,
 strong::-moz-selection,
 mark::-moz-selection {
-    background-color: var(--txt-color);
-    color: var(--bg-color);
+    background-color: transparent;
+    color: var(--acc-color);
 }
 
 span::-moz-selection,
@@ -207,8 +207,8 @@ i::selection,
 u::selection,
 strong::selection,
 mark::selection {
-    background-color: var(--txt-color);
-    color: var(--bg-color);
+    background-color: transparent;
+    color: var(--acc-color);
 }
 
 span::selection,
