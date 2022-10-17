@@ -759,7 +759,7 @@ a:visited {
         --sidenav: 40px;
 
         --txt-copy: .8rem;
-        --txt-medium: 1.5rem;
+        --txt-medium: 1.3rem;
         --txt-copy-ui: .7rem;
 
         --marg-s: 1rem;
@@ -769,13 +769,17 @@ a:visited {
         background-position: 20% 0;
     }
 
-    .arrow-down p {
+    .arrow-down {
+        display: none;
+    }
+
+    /* .arrow-down p {
         display: none;
     }
 
     .arrow-down svg {
         stroke: var(--bg-color);
-    }
+    } */
 
     .side-nav {
         z-index: 2;
@@ -796,6 +800,10 @@ a:visited {
 
     .logo {
         transform: translate(-50%, -50%);
+    }
+
+    .logo h1 {
+        font-size: calc(8vw + 4rem);
     }
 
     .logo h2 {
