@@ -765,10 +765,6 @@ a:visited {
         --marg-s: 1rem;
     }
 
-    .cover {
-        z-index: 3;
-    }
-
     .cover__bg {
         background-position: 20% 0;
     }
