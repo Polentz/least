@@ -1,1 +1,0 @@
-@{ empty | stripTags | escape | dateFormat('Y') }
