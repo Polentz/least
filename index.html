@@ -9,10 +9,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -21,8 +21,9 @@
     <section class="cover">
         <div class="cover__bg"></div>
         <div class="logo">
-            <h1><a class="js-scroll" data-target-section="a-propos">Least</a></h1>
-            <h2>Laboratoire écologie et art pour une société en transition</h2>
+            <!-- <h1 class="logo-lettering"><a class="js-scroll" data-target-section="a-propos">Least</a></h1> -->
+            <h1><a class="logo-lettering">Least</a></h1>
+            <h2 class="logo-name">Laboratoire écologie et art pour une société en transition</h2>
         </div>
         <div class="arrow-down">
             <p class="--txt-ui">Cliquer pour<br>faire défiler</p>
@@ -35,17 +36,19 @@
 
     <nav class="side-nav">
         <div class="menu-btn"></div>
-        <span class="menu-trigger"></span>
         <div class="lang --txt-small">
             <a href="en/index.html">english</a>
         </div>
         <div class="menu">
             <div class="menu-wrapper">
-                <ul class="menu-col">
+                <!-- <ul class="menu-col">
                     <li class="menu-link"><a class="js-scroll" data-target-section="a-propos">À propos</a></li>
                     <li class="menu-link"><a href="pour-en-savoir-plus.html">Pour en savoir plus</a></li>
                     <li class="menu-link"><a href="programme-circulaire.html">Un programme circulaire</a></li>
                     <li class="menu-link"><a class="js-scroll" data-target-section="contact">Contact</a></li>
+                </ul> -->
+                <ul lass="menu-col">
+                    <li class="menu-link">See you<br>in February</li>
                 </ul>
             </div>
         </div>
@@ -61,7 +64,7 @@
         <header class="header">
             <div class="header-wrapper">
                 <p class="site-title"><a href="index.html">least</a></p>
-                <p class="site-title">laboratoire écologie et art pour une société en transition</p>
+                <p class="site-subtitle">laboratoire écologie et art pour une société en transition</p>
             </div>
         </header>
 
@@ -70,21 +73,20 @@
                 <div class="grid-block --outline">
                     <h2 class="--title-large">À propos</h2>
                 </div>
-                <div class="grid-block --outline --blue">
+                <div class="grid-block --outline">
                     <p class="--txt-medium">least réunit des scientifiques, des artistes, des penseurs et penseuses, des
                         ingénieur·e·s,
                         des économistes pour partager des savoirs et des savoir-faire, créer et encourager la co-
                         création avec des groupes locaux pour expérimenter, agir ensemble, partager et apprendre,
                         afin de régénérer la société et son fonctionnement en mobilisant les ressources de chacun·e.
                         Il encourage des modes alternatifs de fonctionnement basés sur des activités communes
-                        allant à l’encontre de la concurrence individuelle.</p>
+                        allant à l'encontre de la concurrence individuelle.</p>
                     <p class="--txt-small">least initie et accompagne des démarches artistiques écologiques, sociales et
-                        scientifiques
-                        participatives dans un programme en quatre volets :
+                        scientifiques participatives dans un programme en quatre volets:
                         les projets co-créatifs et inclusifs,
                         la formation continue des jeunes artistes,
                         une école de la transition populaire et nomade,
-                        des résidences de recherche croisées en Suisse et dans le sud de l’Europe.</p>
+                        des résidences de recherche croisées en Suisse et dans le sud de l'Europe.</p>
                     <!-- <div class="button-wrapper">
                         <a class="button--txt --txt-medium" href="pour-en-savoir-plus.html">pour en savoir plus</a>
                         <div class="button--ui">
@@ -103,12 +105,15 @@
         <section>
             <div class="grid-layout --layout-two-col">
                 <div class="grid-block --outline">
-                    <p class="--txt-medium">Our website will be launched in February. Sign up for our newsletter to
+                    <h2 class="--title-large">newsletter</h2>
+                </div>
+                <div class="grid-block --outline">
+                    <p class="--txt-medium">Our website will be launched in February. <br>Sign up for our newsletter to
                         receive updates and special content by least.</p>
                     <div class="button-wrapper">
-                        <a class="button--txt --txt-medium" href="pour-en-savoir-plus.html">newsletter</a>
+                        <a class="button--txt --txt-medium" href="">sign up here</a>
                         <div class="button--ui">
-                            <a href="pour-en-savoir-plus.html">
+                            <a href="">
                                 <svg width="33" height="22" viewBox="0 0 33 22" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17 21L32 11L17 0.999999" fill="none" />
                                     <path d="M32 11L-2.38419e-07 11" fill="none" />
@@ -116,9 +121,6 @@
                             </a>
                         </div>
                     </div>
-                </div>
-                <div class="grid-block --outline">
-                    <h2 class="--title-large">Sign up</h2>
                 </div>
             </div>
         </section>
@@ -128,7 +130,7 @@
                 <div class="--outline empty">
                 </div>
                 <div class="--outline --square">
-                    <img src="assets/square/least-this-is-the-muffa-square-03.jpg" width="100%" height="100%">
+                    <img src="assets/media/images/least-this-is-the-muffa-square-03.jpg" width="100%" height="100%">
                 </div>
                 <div class="--outline empty">
                 </div>
@@ -147,20 +149,20 @@
             </div>
             <div class="grid-layout --layout-two-col">
                 <div class="grid-block --outline">
-                    <p class="--txt-medium">Huit personnes sont à l’origine de least, de sa conception, de sa mission,
+                    <p class="--txt-medium">Huit personnes sont à l'origine de least, de sa conception, de sa mission,
                         de son programme et de son fonctionnement.</p>
                     <div class="grid-item">
                         <p class="--txt-small">Ensemble, ils définissent les appels à projets, élaborent les réflexions
                             communes sur les thèmes abordés, accompagnent la mise en œuvre et le développement de chaque
-                            initiative. Ils engagent l’équipe opérationnelle. least est une association qui a été crée
+                            initiative. Ils engagent l'équipe opérationnelle. least est une association qui a été crée
                             le 10 février 2021 et qui est basée à Genève.</p>
                     </div>
                 </div>
                 <div class="grid-block --outline">
                     <div class="grid-item">
                         <h3 class="--title-small">Vincent Barras</h3>
-                        <p class="--txt-small">Directeur de l’Institut des humanités en médecine et professeur
-                            d’histoire de la médecine et des sciences (UNIL-CHUV), performeur, auteur.</p>
+                        <p class="--txt-small">Directeur de l'Institut des humanités en médecine et professeur
+                            d'histoire de la médecine et des sciences (UNIL-CHUV), performeur, auteur.</p>
                     </div>
                     <div class="grid-item">
                         <h3 class="--title-small">Tony Berrada</h3>
@@ -169,13 +171,13 @@
                     </div>
                     <div class="grid-item">
                         <h3 class="--title-small">Claire de Ribaupierre</h3>
-                        <p class="--txt-small">Docteur ès Lettres, spécialisée dans le domaine de l’anthropologie,
+                        <p class="--txt-small">Docteur ès Lettres, spécialisée dans le domaine de l'anthropologie,
                             dramaturge, co-créatrice
                             de projets artistiques.</p>
                     </div>
                     <div class="grid-item">
                         <h3 class="--title-small">Alexander Federau</h3>
-                        <p class="--txt-small">Docteur en philosophie de l’écologie, titulaire d’un diplôme en physique
+                        <p class="--txt-small">Docteur en philosophie de l'écologie, titulaire d'un diplôme en physique
                             EPFZ, engagé depuis
                             de nombreuses années sur les questions environnementales.</p>
                     </div>
@@ -188,19 +190,19 @@
                     </div>
                     <div class="grid-item">
                         <h3 class="--title-small">Véronique Ferrero Delacoste</h3>
-                        <p class="--txt-small">Curatrice spécialisée dans le domaine des arts vivants, titulaire d’un
+                        <p class="--txt-small">Curatrice spécialisée dans le domaine des arts vivants, titulaire d'un
                             Master Art in the
                             public sphere, directrice de projets artistiques, participatifs et co-créatifs.</p>
                     </div>
                     <div class="grid-item">
                         <h3 class="--title-small">Adina Secretan</h3>
-                        <p class="--txt-small">Chorégraphe, metteuse en scène, titulaire d’un Master en philosophie,
+                        <p class="--txt-small">Chorégraphe, metteuse en scène, titulaire d'un Master en philosophie,
                             porteuse de projets
                             artistiques sociaux et communautaires.</p>
                     </div>
                     <div class="grid-item">
                         <h3 class="--title-small">Laurent de Wurstemberger</h3>
-                        <p class="--txt-small">Architecte AAM, fondateur de l’atelier d’architecture LDW, co-fondateur
+                        <p class="--txt-small">Architecte AAM, fondateur de l'atelier d'architecture LDW, co-fondateur
                             de Terrabloc (lauréat
                             du Prix Sud 2019, start-up durable).</p>
                     </div>
@@ -253,7 +255,7 @@
                 </div>
                 <div class="image-wrapper">
                     <img src="assets/images/least-6.jpg">
-                    <p class="--txt-caption">Résidence Val d’Illiez©Eliott Croubalian</p>
+                    <p class="--txt-caption">Résidence Val d'Illiez©Eliott Croubalian</p>
                 </div>
                 <div class="image-wrapper">
                     <img src="assets/images/NWWT-Amsterdam©MammalianDivingReflex.jpeg">
@@ -267,7 +269,7 @@
                 </div>
                 <div class="image-wrapper">
                     <img src="assets/images/least-4.jpg">
-                    <p class="--txt-caption">Appel d’air_Thierry Boutonnier©Julie Bourges</p>
+                    <p class="--txt-caption">Appel d'air_Thierry Boutonnier©Julie Bourges</p>
                 </div>
                 <div class="image-wrapper">
                     <img src="assets/images/SexAndDeath©SamaraHersch.jpeg">
@@ -284,7 +286,7 @@
                 <div class="grid-block --outline">
                     <div class="contact--block">
                         <p class="site-title">least</p>
-                        <p class="site-title">laboratoire écologie et art pour une société en transition</p>
+                        <p class="site-subtitle">laboratoire écologie et art pour une société en transition</p>
                     </div>
                     <div class="contact--block">
                         <p class="--txt-small">4, rue du Beulet</p>
@@ -303,10 +305,10 @@
                 </div>
                 <div class="--outline empty">
                 </div>
-                <div class="--outline --square">
-                    <img src="assets/square/least-this-is-the-muffa-square-02.jpg" width="100%" height="100%">
-                </div>
                 <div class="--outline empty">
+                </div>
+                <div class="--outline --square">
+                    <img src="assets/media/images/least-this-is-the-muffa-square-02.jpg" width="100%" height="100%">
                 </div>
             </div>
         </section>
@@ -316,9 +318,7 @@
         </section>
     </main>
 
-    <!-- <script src="cursor.js"></script> -->
-    <!-- <script src="menu.js"></script> -->
-    <!-- <script src="slide.js"></script> -->
-    <!-- <script src="home.js"></script> -->
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/cursor.js"></script>
+    <script src="assets/js/logo.js"></script>
 </body>

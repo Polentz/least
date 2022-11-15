@@ -8,24 +8,24 @@
     <title>least</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
     <span id="cursor"></span>
 
     <section class="cover">
-        <!-- <div class="cover__color"></div> -->
         <div class="cover__bg"></div>
         <div class="logo">
-            <h1><a class="js-scroll" data-target-section="about">Least</a></h1>
-            <h2>Laboratoire écologie et art pour une société en transition</h2>
+            <!-- <h1 class="logo-lettering"><a class="js-scroll" data-target-section="a-propos">Least</a></h1> -->
+            <h1><a class="logo-lettering">Least</a></h1>
+            <h2 class="logo-name">Laboratoire écologie et art pour une société en transition</h2>
         </div>
         <div class="arrow-down">
-            <p class="--txt-ui">Click<br>to scroll</p>
+            <p class="--txt-ui">Cliquer pour<br>faire défiler</p>
             <svg width="22" height="33" viewBox="0 0 22 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 17L11 32L21 17" />
                 <path d="M11 32L11 -2.38419e-07" />
@@ -35,17 +35,19 @@
 
     <nav class="side-nav">
         <div class="menu-btn"></div>
-        <span class="menu-trigger"></span>
         <div class="lang --txt-small">
             <a href="../index.html">français</a>
         </div>
         <div class="menu">
             <div class="menu-wrapper">
-                <ul class="menu-col">
+                <!-- <ul class="menu-col">
                     <li class="menu-link"><a class="js-scroll" data-target-section="about">About</a></li>
                     <li class="menu-link"><a href="../en/find-out-more.html">Find out more</a></li>
                     <li class="menu-link"><a href="../en/programme-circularity.html">A programme’s circularity</a></li>
                     <li class="menu-link"><a class="js-scroll" data-target-section="contact">Contact</a></li>
+                </ul> -->
+                <ul lass="menu-col">
+                    <li class="menu-link">See you<br>in February</li>
                 </ul>
             </div>
         </div>
@@ -60,8 +62,8 @@
     <main class="content" id="about">
         <header class="header">
             <div class="header-wrapper">
-                <p class="site-title">least</p>
-                <p class="site-title">laboratoire écologie et art pour une société en transition</p>
+                <p class="site-title"><a href="index.html">least</a></p>
+                <p class="site-subtitle">laboratoire écologie et art pour une société en transition</p>
             </div>
         </header>
 
@@ -70,18 +72,44 @@
                 <div class="grid-block --outline">
                     <h2 class="--title-large">About</h2>
                 </div>
-                <div class="grid-block --outline --blue">
-                    <p class="--txt-medium">least initiates and accompanies artistic, ecological, social and scientific
-                        participatory approaches, whose objective is to activate the collective awareness and resilience
-                        of our ecosystem, through the sharing of knowledge. Bringing together experts and artists, the
-                        projects will be co-created with local groups (associations, schools, residents, etc.).</p>
-                    <p class="--txt-small">The programme is divided into four parts: co-creative and inclusive projects,
-                        continuing education for young artists, a popular and nomadic school of transition and research
-                        residencies in Switzerland and Southern Europe.</p>
-                    <div class="button-wrapper">
+                <div class="grid-block --outline">
+                    <p class="--txt-medium">least brings together scientists, artists, thinkers, engineers and
+                        economists to share knowledge and know-how, foster co-creation with local groups, experiment,
+                        act together, share and learn, in order to regenerate society and its functioning by mobilising
+                        everyone's resources. It encourages alternative ways of functioning based on common activities
+                        that go against individual competition.</p>
+                    <p class="--txt-small">least initiates and supports participatory ecological, social and scientific
+                        artistic approaches
+                        in a four-part programme: co-creative and inclusive projects; continuing education for young
+                        artists; a popular and nomadic school of transition; cross-research residencies in Switzerland
+                        and Southern Europe.</p>
+                    <!-- <div class="button-wrapper">
                         <a class="button--txt --txt-medium" href="../en/find-out-more.html">find out more</a>
                         <div class="button--ui">
                             <a href="../en/find-out-more.html">
+                                <svg width="33" height="22" viewBox="0 0 33 22" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 21L32 11L17 0.999999" fill="none" />
+                                    <path d="M32 11L-2.38419e-07 11" fill="none" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="grid-layout --layout-two-col">
+                <div class="grid-block --outline">
+                    <h2 class="--title-large">newsletter</h2>
+                </div>
+                <div class="grid-block --outline">
+                    <p class="--txt-medium">Our website will be launched in February. <br>Sign up for our newsletter to
+                        receive updates and special content by least.</p>
+                    <div class="button-wrapper">
+                        <a class="button--txt --txt-medium" href="">sign up here</a>
+                        <div class="button--ui">
+                            <a href="">
                                 <svg width="33" height="22" viewBox="0 0 33 22" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17 21L32 11L17 0.999999" fill="none" />
                                     <path d="M32 11L-2.38419e-07 11" fill="none" />
@@ -107,7 +135,7 @@
             </div>
         </section>
 
-        <section>
+        <!-- <section>
             <div class="grid-layout --layout-two-col">
                 <div class="grid-block --outline">
                     <h2 class="--title-large">Team</h2>
@@ -244,7 +272,7 @@
                     <p class="--txt-caption">Sex and Death (and the Internet)_Samara Hersch ©Ponch Hawkes</p>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section id="contact">
             <div class="grid-layout --layout-two-col">
@@ -254,7 +282,7 @@
                 <div class="grid-block --outline">
                     <div class="contact--block">
                         <p class="site-title">least</p>
-                        <p class="site-title">laboratoire écologie et art pour une société en transition</p>
+                        <p class="site-subtitle">laboratoire écologie et art pour une société en transition</p>
                     </div>
                     <div class="contact--block">
                         <p class="--txt-small">4, rue du Beulet</p>
@@ -273,10 +301,10 @@
                 </div>
                 <div class="--outline empty">
                 </div>
+                <div class="--outline empty">
+                </div>
                 <div class="--outline --square">
                     <img src="../assets/square/least-this-is-the-muffa-square-02.jpg" width="100%" height="100%">
-                </div>
-                <div class="--outline empty">
                 </div>
             </div>
         </section>
@@ -285,5 +313,8 @@
             <p class="--txt-colophon">2022 © least</p>
         </section>
     </main>
-    <script src="../script.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/cursor.js"></script>
+    <script src="../assets/js/logo.js"></script>
 </body>
