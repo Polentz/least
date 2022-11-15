@@ -202,5 +202,18 @@ if (pageLinks) {
     }
 }
 
+// const showCover = sessionStorage.getItem("cover");
+// const homeCover = document.querySelector(".cover");
+
+// const backHome = document.getElementById("back-home");
+// when this link is clicked, removeItem from sessionStorage
+// const linkHome = document.querySelectorAll("a:not(.back-home)");
+
+// if (showCover === "shown") {
+//     homeCover.style.display = "none";
+// } else {
+//     sessionStorage.setItem("cover", "shown");
+//     homeCover.style.display = "block";
+// }
 
 
