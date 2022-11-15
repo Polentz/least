@@ -708,11 +708,13 @@ a:visited {
     }
 
     .logo a {
+        color: var(--acc-color);
         -webkit-filter: blur(0px);
         filter: blur(0px);
     }
 
     .logo h2 {
+        opacity: 1;
         white-space: break-spaces;
     }
 
@@ -877,13 +879,8 @@ a:visited {
     }
 
     .logo h2 {
-        opacity: 1;
         font-size: 1rem;
         margin-top: 1rem;
-    }
-
-    .logo a:hover {
-        color: var(--bg-color);
     }
 
     .arrow-down {
