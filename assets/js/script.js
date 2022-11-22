@@ -1,14 +1,14 @@
 const documentHeight = () => {
     const doc = document.documentElement
     doc.style.setProperty("--doc-height", `${window.innerHeight}px`)
-}
+};
 
 const scrollIntoView = (e) => {
     const targetSection = document.getElementById(e.target.dataset.targetSection);
     targetSection.scrollIntoView({
         behavior: "smooth"
     });
-}
+};
 
 const jsScroll = () => {
     const pageLinks = document.querySelectorAll(".js-scroll");
@@ -16,7 +16,7 @@ const jsScroll = () => {
         const pagelink = pageLinks[i];
         pagelink.addEventListener("click", scrollIntoView, false);
     }
-}
+};
 
 const menu = () => {
     const openBtn = document.querySelector(".menu-btn");
@@ -55,7 +55,7 @@ const menu = () => {
             menu.classList.remove("visible");
         }, 500);
     });
-}
+};
 
 const header = () => {
     const topBar = document.querySelector(".header");
@@ -71,7 +71,7 @@ const header = () => {
         }
         lastScrollTop = scrollTop;
     }, false);
-}
+};
 
 window.addEventListener("resize", documentHeight);
 documentHeight();

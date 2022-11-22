@@ -165,6 +165,10 @@ em {
     font-style: italic;
 }
 
+strong {
+    font-weight: 700;
+}
+
 p::-moz-selection,
 h1::-moz-selection,
 h2::-moz-selection,
