@@ -220,3 +220,18 @@ img::selection {
     color: transparent;
     background: transparent;
 }
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+    border-left: 1px solid var(--txt-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--txt-color);
+    border-left: 1px solid var(--txt-color);
+}
