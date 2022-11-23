@@ -197,10 +197,10 @@ a:visited {
     background-color: var(--txt-color);
     border-radius: 50%;
     position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
+    top: var(--sidenav);
+    /* -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    transform: translateY(-50%); */
     -webkit-transition: -webkit-transform .9s cubic-bezier(0.4, 0.1, 0.4, 1.15);
     transition: -webkit-transform .9s cubic-bezier(0.4, 0.1, 0.4, 1.15);
     -o-transition: transform .9s cubic-bezier(0.4, 0.1, 0.4, 1.15);
