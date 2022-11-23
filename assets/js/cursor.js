@@ -6,10 +6,9 @@ document.addEventListener("mousemove", (event) => {
     let y = event.pageY;
     cursor.style.left = x + "px";
     cursor.style.top = y + "px";
-
-    let w = document.body.clientWidth;
-    const xP = event.pageX / w * 100;
-    const xX = xP.toFixed(0);
+    // let w = document.body.clientWidth;
+    // const xP = event.pageX / w * 100;
+    // const xX = xP.toFixed(0);
 });
 
 links.forEach(link => {
