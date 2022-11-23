@@ -354,10 +354,13 @@ a:visited {
     text-transform: lowercase;
 }
 
+.blur {
+    -webkit-filter: blur(1.5px);
+    filter: blur(1.5px);
+}
+
 .logo a {
     color: var(--acc-color);
-    /* -webkit-filter: blur(1px);
-    filter: blur(1px); */
     -webkit-filter: opacity(.75);
     filter: opacity(.75);
     text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.9);
@@ -367,6 +370,11 @@ a:visited {
     -o-transition: all .5s ease;
     transition: all .5s ease;
     cursor: pointer;
+}
+
+.blur:hover {
+    -webkit-filter: blur(0);
+    filter: blur(0);
 }
 
 .logo a:hover {
