@@ -150,8 +150,6 @@ a:visited {
     line-height: 2;
 }
 
-/* menu */
-
 .side-nav {
     position: fixed;
     bottom: 0;
@@ -159,7 +157,6 @@ a:visited {
     z-index: 4;
     width: var(--sidenav);
     height: 100%;
-    /* border-right: var(--border); */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -191,23 +188,16 @@ a:visited {
     transition: color 1s ease;
 }
 
-.--temp-centered {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.--temp-top {
-    top: var(--sidenav);
-}
-
 .menu-btn {
     width: 24px;
     height: 24px;
     background-color: var(--txt-color);
     border-radius: 50%;
     position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     -webkit-transition: -webkit-transform .9s cubic-bezier(0.4, 0.1, 0.4, 1.15);
     transition: -webkit-transform .9s cubic-bezier(0.4, 0.1, 0.4, 1.15);
     -o-transition: transform .9s cubic-bezier(0.4, 0.1, 0.4, 1.15);
@@ -288,6 +278,10 @@ a:visited {
 
 .close-btn {
     position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     visibility: hidden;
     opacity: 0;
     z-index: 4;
@@ -308,8 +302,6 @@ a:visited {
 .fade-in {
     opacity: 1;
 }
-
-/* cover */
 
 .cover {
     position: sticky;
