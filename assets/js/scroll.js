@@ -1,5 +1,5 @@
 const revealOnScroll = () => {
-    const reveals = document.querySelectorAll(".main-content section");
+    const reveals = document.querySelectorAll(".main section");
     for (let i = 0; i < reveals.length; i++) {
         const windowHeight = window.innerHeight;
         const elementTop = reveals[i].getBoundingClientRect().top;
@@ -13,8 +13,5 @@ const revealOnScroll = () => {
     }
 }
 
-const scrollFunctions = () => {
-    window.addEventListener("scroll", revealOnScroll);
-}
-
-scrollFunctions();
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();

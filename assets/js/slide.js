@@ -1,7 +1,7 @@
 const btnLeft = document.getElementById("btn-left");
 const btnRight = document.getElementById("btn-right");
-const scrollContainer = document.querySelector(".gallery");
-const images = document.querySelectorAll(".gallery img");
+const scrollContainer = document.querySelector(".gallery-block");
+const images = document.querySelectorAll(".image-wrapper img");
 const distance = screen.width / 2;
 
 if (scrollContainer) {
@@ -11,11 +11,11 @@ if (scrollContainer) {
             behavior: "smooth"
         });
         images.forEach(image => {
-            image.style.filter = "none"
+            image.classList.add("--grayscale");
         });
         window.addEventListener("scroll", () => {
             images.forEach(image => {
-                image.style.filter = "grayscale(1)"
+                image.classList.remove("--grayscale");
             });
         });
     })
@@ -25,11 +25,11 @@ if (scrollContainer) {
             behavior: "smooth"
         });
         images.forEach(image => {
-            image.style.filter = "none";
+            image.classList.add("--grayscale");
         });
         window.addEventListener("scroll", () => {
             images.forEach(image => {
-                image.style.filter = "grayscale(1)";
+                image.classList.remove("--grayscale");
             });
         });
     });

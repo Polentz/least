@@ -1,4 +1,4 @@
-const logoLettering = document.querySelector(".logo-lettering");
+const logo = document.querySelector(".logo-name");
 const logoContainer = document.querySelector(".cover");
 const animation = sessionStorage.getItem("animation");
 let lastScrollTop = 0;
@@ -12,7 +12,7 @@ if (animation === "done") {
     })
 };
 
-logoLettering.addEventListener("click", () => {
+logo.addEventListener("click", () => {
     logoContainer.classList.add("animation");
 });
 

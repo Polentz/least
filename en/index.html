@@ -6,6 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>least</title>
+
+    <meta name="description"
+        content="least [laboratoire écologie et art pour une société en transition] brings together scientists, artists, thinkers, engineers and economists to share knowledge and know-how, foster co-creation with local groups, experiment, act together, share and learn, in order to regenerate society and its functioning by mobilising everyone’s resources. It encourages alternative ways of functioning based on common activities that go against individual competition.">
+    <link rel="canonical" href="https://www.least.eco/">
+    <meta name="keywords"
+        content="ecology, art, geneva, co-creation, co-creative, inclusive projects, continuing education, school of transition, cross-research residencies">
+    <meta property="og:locale" content="en_EN">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="least">
+    <meta property="og:description"
+        content="least [laboratoire écologie et art pour une société en transition] brings together scientists, artists, thinkers, engineers and economists to share knowledge and know-how, foster co-creation with local groups, experiment, act together, share and learn, in order to regenerate society and its functioning by mobilising everyone’s resources. It encourages alternative ways of functioning based on common activities that go against individual competition.">
+    <meta property="og:url" content="https://www.least.eco/">
+    <meta property="og:site_name" content="least">
+    <meta property="og:image" content="../assets/media/images/this-is-the-muffa.jpg">
+    <meta property="og:image:alt" content="Visual identity of least with a collage of mold images">
+    <meta property="og:image:secure_url" content="../assets/media/images/this-is-the-muffa.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:description"
+        content="least [laboratoire écologie et art pour une société en transition] brings together scientists, artists, thinkers, engineers and economists to share knowledge and know-how, foster co-creation with local groups, experiment, act together, share and learn, in order to regenerate society and its functioning by mobilising everyone’s resources. It encourages alternative ways of functioning based on common activities that go against individual competition.">
+    <meta name="twitter:title"
+        content="least [laboratoire écologie et art pour une société en transition] brings together scientists, artists, thinkers, engineers and economists to share knowledge and know-how, foster co-creation with local groups, experiment, act together, share and learn, in order to regenerate society and its functioning by mobilising everyone’s resources. It encourages alternative ways of functioning based on common activities that go against individual competition.">
+    <meta name="twitter:image" content="../assets/media/images/this-is-the-muffa.jpg">
+    <meta name="twitter:image:alt" content="Visual identity of least with a collage of mold images">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="shortcut icon" type="image/png" sizes="48x48" href="../assets/favicon/least-favicon-48.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="../assets/favicon/least-favicon-192.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap"
@@ -15,13 +41,13 @@
 </head>
 
 <body>
-    <span id="cursor"></span>
+    <span id="cursor" class="cursor"></span>
 
     <section class="cover">
-        <div class="cover__bg"></div>
+        <div class="cover-bg"></div>
         <div class="logo">
-            <h1 class="logo-lettering blur"><a class="js-scroll" data-target-section="about">Least</a></h1>
-            <h2 class="logo-name">Laboratoire écologie et art pour une société en transition</h2>
+            <h1 class="logo-name --blur"><a class="js-scroll" data-target-section="about">Least</a></h1>
+            <h2 class="logo-wording">Laboratoire écologie et art pour une société en transition</h2>
         </div>
         <!-- <div class="arrow-down">
             <p class="--txt-ui">Cliquer pour<br>faire défiler</p>
@@ -33,22 +59,20 @@
     </section>
 
     <nav class="side-nav">
-        <div class="menu-btn --temp-centered"></div>
-        <div class="lang --txt-small">
+        <div class="menu-btn"></div>
+        <div class="lang-btn --txt-small">
             <a href="../index.html">français</a>
         </div>
         <div class="menu">
-            <div class="menu-wrapper">
-                <ul class="menu-col">
-                    <li class="menu-link">See you<br>in February</li>
-                    <!-- <li class="menu-link"><a class="js-scroll" data-target-section="about">About</a></li>
+            <ul class="menu-wrapper">
+                <li class="menu-link">See you in<br>February 2023</li>
+                <!-- <li class="menu-link"><a class="js-scroll" data-target-section="about">About</a></li>
                     <li class="menu-link"><a href="../en/find-out-more.html">Find out more</a></li>
                     <li class="menu-link"><a href="../en/programme-circularity.html">A programme's circularity</a></li>
                     <li class="menu-link"><a class="js-scroll" data-target-section="contact">Contact</a></li> -->
-                </ul>
-            </div>
+            </ul>
         </div>
-        <div class="close-btn --temp-centered">
+        <div class="close-btn">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <line x1="18.8388" y1="0.868263" x2="1.86828" y2="17.8388" />
                 <line x1="18.1317" y1="17.8388" x2="1.16118" y2="0.86828" />
@@ -56,7 +80,7 @@
         </div>
     </nav>
 
-    <main class="main-content" id="about">
+    <main class="main" id="about">
         <header class="header">
             <div class="header-wrapper">
                 <p class="site-title"><a href="../en/index.html">least</a></p>
@@ -66,11 +90,13 @@
 
         <section>
             <div class="grid-layout">
-                <div class="grid-block --outline">
-                    <h2 class="--title-large">About</h2>
+                <div class="--outline">
+                    <div class="grid-text">
+                        <h2 class="--title-large">About</h2>
+                    </div>
                 </div>
-                <div class="grid-block --outline">
-                    <!-- <p class="--txt-medium"><strong>least</strong> [ecology and art laboratory for a society in
+                <!-- <div class="--outline">
+                    <p class="--txt-medium"><strong>least</strong> [ecology and art laboratory for a society in
                         transition] is an
                         association born from the reflections of eight people from different backgrounds who converge
                         towards the common observation that everything has to be built and (re)created, starting with
@@ -82,10 +108,10 @@
                         the term, i.e. a series of actions with a view to achieving a result. This ambitious programme
                         initiates and supports artistic, scientific, ecological, social and participatory approaches. To
                         this end, it aims to implement tools capable of contributing to the development of collective
-                        thought and action that will change the world.</p> -->
-                    <!-- <div class="button-wrapper">
-                        <a class="button--txt --txt-medium" href="pour-en-savoir-plus.html">pour en savoir plus</a>
-                        <div class="button--ui">
+                        thought and action that will change the world.</p>
+                    <div class="button-wrapper">
+                        <a class="button-label --txt-medium" href="pour-en-savoir-plus.html">pour en savoir plus</a>
+                        <div class="button-ui">
                             <a href="pour-en-savoir-plus.html">
                                 <svg width="33" height="22" viewBox="0 0 33 22" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17 21L32 11L17 0.999999" fill="none" />
@@ -93,24 +119,27 @@
                                 </svg>
                             </a>
                         </div>
-                    </div> -->
-
+                    </div>
+                </div> -->
+                <div class="--outline">
                     <!-- NEW TEXT -->
-                    <p class="--txt-medium"><strong>least</strong> (ecology and art laboratory for a society in
-                        transition) is an association that supports artistic, scientific, ecological, social and
-                        participatory approaches in order to activate the collective consciousness and resilience of our
-                        “Earth system”: we believe that everything, starting with our practices, our jobs, our habits
-                        and our entire daily life, needs to be reappraised and recreated. To do so,
-                        <strong>least</strong> offers new tools to replace the usual processes and contributes to the
-                        development of collective thought and action that will change the world.
-                    </p>
+                    <div class="grid-text">
+                        <p class="--txt-medium"><strong>least</strong> (ecology and art laboratory for a society in
+                            transition) is an association that supports artistic, scientific, ecological, social and
+                            participatory approaches in order to activate the collective consciousness and resilience of
+                            our “Earth system”: we believe that everything, starting with our practices, our jobs, our
+                            habits and our entire daily life, needs to be reappraised and recreated. To do so,
+                            <strong>least</strong> offers new tools to replace the usual processes and contributes to
+                            the development of collective thought and action that will change the world.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section>
             <div class="grid-layout">
-                <!-- <div class="grid-block --outline">
+                <!-- <div class="--outline">
                     <p class="--txt-medium">The programme is divided into four distinct axes linked together in a
                         circular dynamic.</p>
                     <p class="--txt-small">Artistic, social and environmental projects, designed and produced in
@@ -118,25 +147,27 @@
                         a popular and nomadic school of transition, research time.
                     </p>
                 </div>
-                <div class="grid-block --outline --empty">
+                <div class="--outline">
                 </div> -->
 
                 <!-- NEW TEXT -->
-                <div class="grid-block --outline">
-                    <p class="--txt-medium">transdisciplinarity</p>
-                    <p class="--txt-small"><strong>least</strong> brings together scientists, artists, thinkers
-                        and local experts to share knowledge and know-how and foster new, long-term positive strategies
-                        through different skills and tools.</p>
-                    <p class="--txt-medium">long term perspective</p>
-                    <p class="--txt-small"><strong>least</strong> is committed to spreading an ecology of production
-                        that puts research and knowledge transmission at the centre: a process that requires time and
-                        fluidity, far from usual production.</p>
-                    <p class="--txt-medium">co-creation</p>
-                    <p class="--txt-small"><strong>least</strong> claims the right to champion a form of art without an
-                        audience, preferring the notion of a “participating community” to that of a “receiving
-                        audience”. Everyone becomes an actor in this form of “art by infiltration”.</p>
+                <div class="--outline">
+                    <div class="grid-text">
+                        <p class="--txt-medium">transdisciplinarity</p>
+                        <p class="--txt-small"><strong>least</strong> brings together scientists, artists, thinkers
+                            and local experts to share knowledge and know-how and foster new, long-term positive
+                            strategies through different skills and tools.</p>
+                        <p class="--txt-medium">long term perspective</p>
+                        <p class="--txt-small"><strong>least</strong> is committed to spreading an ecology of production
+                            that puts research and knowledge transmission at the centre: a process that requires time
+                            and fluidity, far from usual production.</p>
+                        <p class="--txt-medium">co-creation</p>
+                        <p class="--txt-small"><strong>least</strong> claims the right to champion a form of art without
+                            an audience, preferring the notion of a “participating community” to that of a “receiving
+                            audience”. Everyone becomes an actor in this form of “art by infiltration”.</p>
+                    </div>
                 </div>
-                <div class="grid-block --outline --empty">
+                <div class="--outline">
                     <!-- <h2 class="--title-large">How</h2> -->
                 </div>
             </div>
@@ -144,16 +175,16 @@
 
         <!-- <section>
             <div class="grid-layout">
-                <div class="grid-block --outline">
+                <div class="--outline">
                     <h2 class="--title-large">newsletter</h2>
                 </div>
-                <div class="grid-block --outline">
+                <div class="--outline">
                     <p class="--txt-medium">Our website will be launched in February. <br>Sign up for our newsletter to
                         receive updates and special content by least.</p>
                     <div class="button-wrapper">
-                        <a class="button--txt --txt-medium" href="http://eepurl.com/iewh4X" target="_blank">sign up
+                        <a class="button-label --txt-medium" href="http://eepurl.com/iewh4X" target="_blank">sign up
                             here</a>
-                        <div class="button--ui">
+                        <div class="button-ui">
                             <svg width="33" height="22" viewBox="0 0 33 22" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M17 21L32 11L17 0.999999" fill="none" />
                                 <path d="M32 11L-2.38419e-07 11" fill="none" />
@@ -166,112 +197,110 @@
 
         <section>
             <div class="grid-layout --layout-four-col">
-                <div class="square-block --outline flip-front">
+                <div class="grid-square --outline card-front">
                     <p class="--txt-medium">Vivre la Rhône</p>
-                    <div class="flip-back">
+                    <div class="card-back">
                         <p class="--txt-medium">More information coming soon</p>
+
                     </div>
                 </div>
-                <div class="square-block --outline flip-front">
+                <div class="grid-square --outline card-front">
                     <p class="--txt-medium">Common Dreams</p>
-                    <div class="flip-back">
+                    <div class="card-back">
                         <p class="--txt-medium">More information coming soon</p>
                     </div>
                 </div>
-                <div class="square-block --outline flip-front">
+                <div class="grid-square --outline card-front">
                     <p class="--txt-medium">Verger de Rue</p>
-                    <div class="flip-back">
+                    <div class="card-back">
                         <p class="--txt-medium">More information coming soon</p>
                     </div>
                 </div>
-                <div class="square-block --outline --square">
-                    <img src="../assets/media/images/least-this-is-the-muffa-square-03.jpg" width="100%" height="100%">
+                <div class="grid-square --outline">
+                    <img src="../assets/media/images/least-this-is-the-muffa-square-03.jpg">
                 </div>
             </div>
         </section>
 
         <section>
             <div class="grid-layout">
-                <div class="grid-image --outline --empty">
+                <div class="grid-image --outline">
                 </div>
                 <div class="grid-image --outline">
-                    <img src="../assets/media/images/least-this-is-the-muffa-square-05.jpg" width="100%" height="100%">
+                    <img src="../assets/media/images/least-this-is-the-muffa-square-05.jpg">
                 </div>
-                <div class="grid-image --outline --empty">
+                <div class="grid-image --outline">
                 </div>
-                <div class="grid-image --outline --empty">
+                <div class="grid-image --outline">
                 </div>
             </div>
         </section>
 
         <section>
             <!-- <div class="grid-layout">
-                <div class="grid-block --outline">
+                <div class="--outline">
                     <h2 class="--title-large">Who</h2>
                 </div>
-                <div class="grid-block --outline --empty">
+                <div class="--outline">
                 </div>
             </div> -->
             <div class="grid-layout">
-                <!-- <div class="grid-block --outline">
+                <!-- <div class="--outline">
                     <p class="--txt-medium">Founders</p>
-                    <div class="grid-item">
+                    <div class="grid-list">
                         <p class="--txt-small">Together, they decide on calls for projects, develop shared thinking on
                             agreed themes, and
                             accompany the implementation and development of each project. They appoint staff.</p>
                     </div>
                 </div> -->
-                <div class="grid-block --outline">
+                <div class="--outline">
                     <h2 class="--title-large">Founders</h2>
                 </div>
-                <div class="grid-block --outline">
-                    <div class="grid-item">
-                        <h3 class="--title-small">Vincent Barras</h3>
-                        <p class="--txt-small">Director, Institute for medical humanities, and professor in the history
-                            of medicine and
-                            science UNIL-CHUV (IHM), performer, writer. </p>
-                    </div>
-                    <div class="grid-item">
-                        <h3 class="--title-small">Tony Berrada</h3>
-                        <p class="--txt-small">Professor of finance, UNIGE; director, Geneva Finance Research Institute.
-                        </p>
-                    </div>
-                    <div class="grid-item">
-                        <h3 class="--title-small">Claire de Ribaupierre</h3>
-                        <p class="--txt-small">Doctor in letters, specialised in anthropology, dramatist, co-creator of
-                            artistic projects.
-                        </p>
-                    </div>
-                    <div class="grid-item">
-                        <h3 class="--title-small">Alexander Federau</h3>
-                        <p class="--txt-small">Doctor of philosophy in the field of ecology; diploma in physics, EPFZ,
-                            active for many years
-                            on environmental issues. </p>
-                    </div>
+                <div class="--outline">
+                    <div class="grid-text">
+                        <div class="grid-list">
+                            <h3 class="--title-small">Vincent Barras</h3>
+                            <p class="--txt-small">Director, Institute for medical humanities, and professor in the
+                                history of medicine and science UNIL-CHUV (IHM), performer, writer. </p>
+                        </div>
+                        <div class="grid-list">
+                            <h3 class="--title-small">Tony Berrada</h3>
+                            <p class="--txt-small">Professor of finance, UNIGE; director, Geneva Finance Research
+                                Institute.
+                            </p>
+                        </div>
+                        <div class="grid-list">
+                            <h3 class="--title-small">Claire de Ribaupierre</h3>
+                            <p class="--txt-small">Doctor in letters, specialised in anthropology, dramatist, co-creator
+                                of artistic projects.
+                            </p>
+                        </div>
+                        <div class="grid-list">
+                            <h3 class="--title-small">Alexander Federau</h3>
+                            <p class="--txt-small">Doctor of philosophy in the field of ecology; diploma in physics,
+                                EPFZ, active for many years on environmental issues. </p>
+                        </div>
 
-                    <div class="grid-item">
-                        <h3 class="--title-small">Rodrigo Fernandez</h3>
-                        <p class="--txt-small">Doctor in materials engineering EPFL; co-founder of Terrabloc (winner of
-                            the Prix Sud 2019,
-                            sustainable start-up).</p>
-                    </div>
-                    <div class="grid-item">
-                        <h3 class="--title-small">Véronique Ferrero Delacoste</h3>
-                        <p class="--txt-small">Curator specialising in the performing arts; Masters degree in Art in the
-                            public sphere,
-                            director of artistic, participative and co-creative projects.</p>
-                    </div>
-                    <div class="grid-item">
-                        <h3 class="--title-small">Adina Secretan</h3>
-                        <p class="--txt-small">Choreographer and director; Masters degree in philosophy, responsible for
-                            social and
-                            community arts projects.</p>
-                    </div>
-                    <div class="grid-item">
-                        <h3 class="--title-small">Laurent de Wurstemberger</h3>
-                        <p class="--txt-small">Architect AAM; founder of the architects’ studio LDW; co-founder of
-                            Terrabloc (winner of the
-                            Prix Sud 2019, sustainable start-up).</p>
+                        <div class="grid-list">
+                            <h3 class="--title-small">Rodrigo Fernandez</h3>
+                            <p class="--txt-small">Doctor in materials engineering EPFL; co-founder of Terrabloc (winner
+                                of the Prix Sud 2019, sustainable start-up).</p>
+                        </div>
+                        <div class="grid-list">
+                            <h3 class="--title-small">Véronique Ferrero Delacoste</h3>
+                            <p class="--txt-small">Curator specialising in the performing arts; Masters degree in Art in
+                                the public sphere, director of artistic, participative and co-creative projects.</p>
+                        </div>
+                        <div class="grid-list">
+                            <h3 class="--title-small">Adina Secretan</h3>
+                            <p class="--txt-small">Choreographer and director; Masters degree in philosophy, responsible
+                                for social and community arts projects.</p>
+                        </div>
+                        <div class="grid-list">
+                            <h3 class="--title-small">Laurent de Wurstemberger</h3>
+                            <p class="--txt-small">Architect AAM; founder of the architects’ studio LDW; co-founder of
+                                Terrabloc (winner of the Prix Sud 2019, sustainable start-up).</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -347,16 +376,16 @@
 
         <!-- <section>
             <div class="grid-layout">
-                <div class="grid-block --outline">
+                <div class="--outline">
                     <h2 class="--title-large">newsletter</h2>
                 </div>
-                <div class="grid-block --outline">
+                <div class="--outline">
                     <p class="--txt-medium">Our website will be launched in February. <br>Sign up for our newsletter to
                         receive updates and special content by least.</p>
                     <div class="button-wrapper">
-                        <a class="button--txt --txt-medium" href="http://eepurl.com/iewh4X" target="_blank">sign up
+                        <a class="button-label --txt-medium" href="http://eepurl.com/iewh4X" target="_blank">sign up
                             here</a>
-                        <div class="button--ui">
+                        <div class="button-ui">
                             <svg width="33" height="22" viewBox="0 0 33 22" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M17 21L32 11L17 0.999999" fill="none" />
                                 <path d="M32 11L-2.38419e-07 11" fill="none" />
@@ -369,19 +398,23 @@
 
         <section>
             <div class="grid-layout">
-                <div class="grid-block --outline">
-                    <h2 class="--title-large">least à lire</h2>
+                <div class="--outline">
+                    <div class="grid-text">
+                        <h2 class="--title-large">least à lire</h2>
+                    </div>
                 </div>
-                <div class="grid-block --outline">
-                    <p class="--txt-medium">Sign up for our newsletter to receive updates and special content</p>
-                    <div class="button-wrapper">
-                        <a class="button--txt --txt-medium" href="http://eepurl.com/iewh4X" target="_blank">sign up
-                            here</a>
-                        <div class="button--ui">
-                            <svg width="33" height="22" viewBox="0 0 33 22" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17 21L32 11L17 0.999999" fill="none" />
-                                <path d="M32 11L-2.38419e-07 11" fill="none" />
-                            </svg>
+                <div class="--outline">
+                    <div class="grid-text">
+                        <p class="--txt-medium">Sign up for our newsletter to receive updates and special content</p>
+                        <div class="button-wrapper">
+                            <a class="button-label --txt-medium" href="http://eepurl.com/iewh4X" target="_blank">sign up
+                                here</a>
+                            <div class="button-ui">
+                                <svg width="33" height="22" viewBox="0 0 33 22" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 21L32 11L17 0.999999" fill="none" />
+                                    <path d="M32 11L-2.38419e-07 11" fill="none" />
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -390,20 +423,24 @@
 
         <section id="contact">
             <div class="grid-layout">
-                <div class="grid-block --outline">
-                    <h2 class="--title-large">Contact</h2>
+                <div class="--outline">
+                    <div class="grid-text">
+                        <h2 class="--title-large">Contact</h2>
+                    </div>
                 </div>
-                <div class="grid-block --outline">
-                    <div class="contact--block">
-                        <p class="site-title">least</p>
-                        <p class="site-subtitle">laboratoire écologie et art pour une société en transition</p>
-                    </div>
-                    <div class="contact--block">
-                        <p class="--txt-small">4, rue du Beulet</p>
-                        <p class="--txt-small">CH-1203 Genève</p>
-                    </div>
-                    <div class="contact--block">
-                        <p class="--txt-small"><a href="mailto:contact@least.eco">contact@least.eco</a></p>
+                <div class="--outline">
+                    <div class="grid-text">
+                        <div class="contact--block">
+                            <p class="site-title">least</p>
+                            <p class="site-subtitle">laboratoire écologie et art pour une société en transition</p>
+                        </div>
+                        <div class="contact--block">
+                            <p class="--txt-small">4, rue du Beulet</p>
+                            <p class="--txt-small">CH-1203 Genève</p>
+                        </div>
+                        <div class="contact--block">
+                            <p class="--txt-small"><a href="mailto:contact@least.eco">contact@least.eco</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
