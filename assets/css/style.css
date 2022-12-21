@@ -677,12 +677,12 @@ a:visited {
     width: 1.2rem;
     stroke: var(--txt-color);
     stroke-width: 1.5px;
-    cursor: pointer;
     transition: all .5s ease;
 }
 
 .play-btn {
     position: relative;
+    cursor: pointer;
 }
 
 .play-icon.toggle-play {
@@ -702,6 +702,7 @@ a:visited {
 
 .stop-icon.toggle-play {
     fill: var(--txt-color);
+    cursor: pointer;
 }
 
 .audio-time {
@@ -751,6 +752,7 @@ input.seek-slider::-webkit-slider-thumb {
 
 .audio-volume {
     position: relative;
+    cursor: pointer;
 }
 
 .volume-icon.toggle-volume {
