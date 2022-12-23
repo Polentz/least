@@ -46,7 +46,7 @@ playBtns.forEach(btn => {
             })
 
             const controlVolume = () => {
-                if (audio.volume > 0 && !audio.paused) {
+                if (audio.volume > 0) {
                     audio.volume = 0;
                     volumeIcon.classList.add("toggle-volume");
                     muteIcon.classList.add("toggle-volume");
@@ -100,17 +100,12 @@ playBtns.forEach(btn => {
             if (audio.readyState > 0) {
                 displayDuration();
                 setSliderMax();
-            } else {
-                audio.addEventListener("playing", () => {
-                    displayDuration();
-                    setSliderMax();
-                });
             }
 
-            // audio.addEventListener("playing", () => {
-            //     displayDuration();
-            //     setSliderMax();
-            // });
+            audio.addEventListener("playing", () => {
+                displayDuration();
+                setSliderMax();
+            });
 
             seekSlider.addEventListener("input", () => {
                 currentTimeContainer.textContent = calculateTime(seekSlider.value);
