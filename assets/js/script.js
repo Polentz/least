@@ -73,29 +73,47 @@ const header = () => {
     }, false);
 };
 
+const createChild = () => {
+    let div = document.createElement("div");
+    div.classList.add("grid-square", "--outline");
+    return div;
+}
+
 const grid = () => {
     const gridLayout = document.querySelectorAll(".grid-layout");
     for (let i = 0; i < gridLayout.length; i++) {
-        const element = gridLayout[i];
-        const elementChildren = element.children;
-        const childrenArray = Array.from(elementChildren);
-        if (element.children.length == 2) {
-            childrenArray.forEach(element => {
-                element.classList.add("grid-block");
-                if (element.children.length == 0) {
-                    element.classList.add("--empty");
-                }
+        const parent = gridLayout[i];
+        const children = parent.children;
+        const childrenArray = Array.from(children);
+
+        if (parent.children.length != 2) {
+            for (let i = parent.children.length; i < 4; i++) {
+                parent.appendChild(createChild());
+            };
+        };
+        const childrenLength = parent.children.length;
+        console.log(childrenLength);
+        // const multiplesOf = (numbers, number) => numbers.filter(n => !(n % number));
+
+        if (parent.children.length == 2) {
+            parent.classList.add("two-columns");
+            childrenArray.forEach(child => {
+                child.classList.add("grid-block");
+                if (child.children.length == 0) {
+                    child.classList.add("--empty");
+                };
             });
-        } else if (element.children.length == 4) {
-            childrenArray.forEach(element => {
-                element.classList.add("grid-square");
-                if (element.children.length == 0) {
-                    element.classList.add("--empty");
-                }
+        } else if (parent.children.length == 4) {
+            parent.classList.add("four-columns");
+            childrenArray.forEach(child => {
+                child.classList.add("grid-square");
+                if (child.children.length == 0) {
+                    child.classList.add("--empty");
+                };
             });
-        }
-    }
-}
+        };
+    };
+};
 
 // window.onSpotifyIframeApiReady = (IFrameAPI) => {
 //     let element = document.getElementById('embed-iframe');

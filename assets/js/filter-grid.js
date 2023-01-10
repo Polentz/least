@@ -1,13 +1,14 @@
 const filterBtns = document.querySelectorAll(".filter-btn");
 const filterClear = document.getElementById("all-media");
-const mediaLabels = document.querySelectorAll(".media-label");
-const mediaContent = document.querySelectorAll(".media-content");
-const mediaContentClose = document.querySelectorAll(".media-content-close")
+const mediaSection = document.querySelectorAll(".cards-section, .filters-section");
+const mediaCards = document.querySelectorAll(".media-card");
+const mediaContent = document.querySelectorAll(".media-article");
+const mediaContentClose = document.querySelectorAll(".media-content-close");
 
 filterBtns.forEach(btn => {
     btn.addEventListener("click", (element) => {
         applyFilter(element, btn);
-        mediaLabels.forEach(label => {
+        mediaCards.forEach(label => {
             label.classList.remove("highlight");
         });
     });
@@ -15,7 +16,7 @@ filterBtns.forEach(btn => {
         highlightItemPerFilter(element);
     });
     btn.addEventListener("mouseleave", () => {
-        mediaLabels.forEach(label => {
+        mediaCards.forEach(label => {
             label.classList.remove("highlight");
         });
     });
@@ -25,23 +26,26 @@ filterClear.addEventListener("click", () => {
     removeFilters();
 });
 
-mediaLabels.forEach(label => {
+mediaCards.forEach(label => {
     label.addEventListener("click", (element) => {
-        selectContent(element, label);
-        scrollStickyElement();
+        selectContent(element);
     });
 });
 
 mediaContentClose.forEach(btn => {
     btn.addEventListener("click", () => {
         unselectContent();
+        mediaCards.forEach(label => {
+            label.style.display = "flex";
+        });
+        window.scrollTo(0, 0);
     });
 
 })
 
 const highlightItemPerFilter = (element) => {
     const filterName = element.currentTarget.dataset.filter;
-    mediaLabels.forEach(media => {
+    mediaCards.forEach(media => {
         const mediaCategoryTag = media.dataset.category;
         if (mediaCategoryTag.includes(filterName)) {
             media.classList.add("highlight");
@@ -56,14 +60,8 @@ const applyFilter = (element, btn) => {
         btn.classList.remove("filtered");
     });
     filterClear.style.display = "block";
-    mediaContent.forEach(content => {
-        if (content.classList.contains("show-content")) {
-            content.classList.remove("show-content");
-        }
-    });
     const filterName = element.currentTarget.dataset.filter;
-    mediaLabels.forEach(media => {
-        media.classList.remove("selected");
+    mediaCards.forEach(media => {
         const mediaCategoryTag = media.dataset.category;
         if (mediaCategoryTag.includes(filterName)) {
             media.classList.remove("unfiltered");
@@ -71,6 +69,7 @@ const applyFilter = (element, btn) => {
             btn.classList.add("filtered");
         } else {
             media.classList.add("unfiltered");
+            media.classList.remove("filtered");
         };
     });
 };
@@ -79,10 +78,9 @@ const removeFilters = () => {
     filterBtns.forEach(btn => {
         btn.classList.remove("filtered");
     });
-    mediaLabels.forEach(media => {
+    mediaCards.forEach(media => {
         media.classList.remove("unfiltered");
         media.classList.remove("filtered");
-        media.classList.remove("selected");
     });
     mediaContent.forEach(content => {
         content.classList.remove("show-content");
@@ -90,23 +88,17 @@ const removeFilters = () => {
     filterClear.style.display = "none";
 };
 
-const selectContent = (element, label) => {
-    mediaLabels.forEach(label => {
-        label.classList.remove("selected");
-    });
+const selectContent = (element) => {
     const contentTag = element.currentTarget.dataset.name;
     mediaContent.forEach(content => {
         const contentName = content.dataset.name;
         if (contentName.includes(contentTag)) {
-            label.classList.add("selected");
             content.classList.add("show-content");
-            content.scrollIntoView({
-                behavior: "smooth"
-            });
+            content.scrollIntoView({});
         } else {
             content.classList.remove("show-content");
-            mediaLabels.forEach(label => {
-                label.classList.remove("filtered");
+            mediaSection.forEach(section => {
+                section.style.display = "none";
             });
         };
     });
@@ -116,10 +108,6 @@ const unselectContent = () => {
     mediaContent.forEach(content => {
         if (content.classList.contains("show-content")) {
             content.classList.remove("show-content");
-            // const spotifyEmbedWindow = document.querySelector('iframe[src*="spotify.com/embed"]').contentWindow;
-            // spotifyEmbedWindow.postMessage({ command: 'destroy' }, '*');
-            // const spotifyEmbedWindow = document.getElementById("embed-iframe");
-            // spotifyEmbedWindow.togglePlay();
         };
         const audios = document.querySelectorAll("audio");
         for (let i = 0; i < audios.length; i++) {
@@ -129,25 +117,7 @@ const unselectContent = () => {
             }
         }
     });
-    mediaLabels.forEach(label => {
-        if (label.classList.contains("selected")) {
-            label.classList.remove("selected");
-        }
+    mediaSection.forEach(section => {
+        section.style.display = "block";
     });
-}
-
-const scrollStickyElement = () => {
-    const stickyElement = document.querySelector(".selected");
-    let lastScrollTop = 0;
-    window.addEventListener("scroll", () => {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop < lastScrollTop) {
-            setTimeout(() => {
-                stickyElement.style.top = "var(--header)";
-            }, 300);
-        } else {
-            stickyElement.style.top = "0";
-        }
-        lastScrollTop = scrollTop;
-    }, false);
 }

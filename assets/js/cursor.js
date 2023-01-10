@@ -1,5 +1,5 @@
 const cursor = document.getElementById("cursor");
-const links = document.querySelectorAll("a, .menu-btn, .close-btn, .filter-btn, .media-label, .card-front, .media-content-close, .audio-player svg, .seek-slider");
+const links = document.querySelectorAll("a, .menu-btn, .close-btn, .filter-btn, .media-label, .card, .media-content-close, .audio-player svg, .seek-slider");
 const allImages = document.querySelectorAll(".grid-square img");
 
 document.addEventListener("mousemove", (event) => {

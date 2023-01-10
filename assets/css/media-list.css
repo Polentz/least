@@ -1,0 +1,192 @@
+.media-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.media-label,
+.filter-btn {
+    border-bottom: var(--border);
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.filter-btn:last-of-type {
+    display: none;
+}
+
+.media-label {
+    transition: all .5s ease;
+}
+
+.media-label.selected {
+    position: sticky;
+    top: 0;
+    order: -1;
+    margin-bottom: -1px;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.media-label.unfiltered {
+    display: none;
+}
+
+/* .media-label.unfiltered>div,
+.media-label.unfiltered>p {
+    filter: opacity(.2);
+} */
+/* + fix javascript as in grid layout */
+
+
+.filter-btn:hover {
+    text-indent: .5rem;
+}
+
+.filter-btn:hover,
+.media-label:hover,
+.media-label.highlight,
+.media-label.selected:hover {
+    transition: all .5s ease;
+}
+
+.filter-btn[data-filter="reading"]:hover,
+.filter-btn[data-filter="reading"].filtered {
+    background: linear-gradient(217deg, #fff, #AF73BF);
+}
+
+.media-label[data-category="reading"].filtered,
+.media-label[data-category="reading"].selected,
+.media-label[data-category="reading"].highlight,
+.media-label[data-category="reading"]:hover {
+    background: linear-gradient(43deg, #fff, #AF73BF);
+}
+
+.filter-btn[data-filter="video"]:hover,
+.filter-btn[data-filter="video"].filtered {
+    background: linear-gradient(217deg, #fff, #5896e7);
+}
+
+.media-label[data-category="video"].filtered,
+.media-label[data-category="video"].selected,
+.media-label[data-category="video"].highlight,
+.media-label[data-category="video"]:hover {
+    background: linear-gradient(43deg, #fff, #5896e7);
+}
+
+.filter-btn[data-filter="podcast"]:hover,
+.filter-btn[data-filter="podcast"].filtered {
+    background: linear-gradient(217deg, #fff, #A8F0CD);
+}
+
+.media-label[data-category="podcast"].filtered,
+.media-label[data-category="podcast"].selected,
+.media-label[data-category="podcast"].highlight,
+.media-label[data-category="podcast"]:hover {
+    background: linear-gradient(43deg, #fff, #A8F0CD);
+}
+
+.media-label-category {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: var(--marg-s);
+}
+
+/* .filter-btn:hover,
+.filter-btn.filtered,
+.media-label.selected,
+.media-label.highlight,
+.media-label:hover {
+    background-color: var(--txt-color);
+    color: var(--bg-color);
+} */
+
+/* .media-label:hover,
+.media-label.selected {
+    color: var(--bg-color);
+    background-color: var(--txt-color);
+    border-bottom: solid 1px var(--bg-color);
+} */
+
+/* .filter-btn:hover .filter-svg {
+    stroke: var(--bg-color);
+} */
+
+/* media content */
+
+.media-content {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: var(--marg-s);
+    padding: var(--txt-small) 0 var(--marg-s) 0;
+}
+
+.media-content.show-content {
+    display: flex;
+}
+
+.media-content-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--marg-s);
+}
+
+.media-content-category {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.media-content-category img,
+.media-content-header img,
+.media-label-category img {
+    width: var(--txt-small);
+    border: none;
+    mix-blend-mode: difference;
+}
+
+.media-content-wrapper {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: var(--marg-s);
+    padding: 0 var(--marg-s);
+}
+
+.media-content-wrapper video,
+.media-content-wrapper img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    vertical-align: baseline;
+    border: var(--border);
+}
+
+.media-content-close {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .media-label.selected {
+        position: static;
+    }
+
+    .selected,
+    .filtered {
+        color: var(--bg-color);
+    }
+
+    .media-content {
+        padding-bottom: var(--marg-m);
+    }
+}
