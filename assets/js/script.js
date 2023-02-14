@@ -3,6 +3,10 @@ const documentHeight = () => {
     doc.style.setProperty("--doc-height", `${window.innerHeight}px`)
 };
 
+window.addEventListener("load", () => {
+    history.scrollRestoration = "manual";
+});
+
 const scrollIntoView = (e) => {
     const targetSection = document.getElementById(e.target.dataset.targetSection);
     targetSection.scrollIntoView({
@@ -21,6 +25,7 @@ const jsScroll = () => {
 const menu = () => {
     const openBtn = document.querySelector(".menu-btn");
     const closeBtn = document.querySelector(".close-btn");
+    const closeMenuBtns = document.querySelectorAll(".close-btn, .menu-link a");
     const menu = document.querySelector(".menu");
     const menuWrapper = document.querySelector(".menu-wrapper");
     const langBtn = document.querySelector(".lang-btn a");
@@ -43,18 +48,21 @@ const menu = () => {
         }, 600);
     });
 
-    closeBtn.addEventListener("click", () => {
-        menuWrapper.classList.remove("--fade-element");
-        langBtn.style.color = "var(--txt-color)";
-        setTimeout(() => {
-            openBtn.classList.remove("scale");
-            closeBtn.classList.remove("--show-element");
-        }, 300);
-        setTimeout(() => {
-            body.style.overflowY = "scroll";
-            menu.classList.remove("--show-element");
-        }, 500);
-    });
+    closeMenuBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            console.log("click")
+            menuWrapper.classList.remove("--fade-element");
+            langBtn.style.color = "var(--txt-color)";
+            setTimeout(() => {
+                openBtn.classList.remove("scale");
+                closeBtn.classList.remove("--show-element");
+            }, 300);
+            setTimeout(() => {
+                body.style.overflowY = "scroll";
+                menu.classList.remove("--show-element");
+            }, 500);
+        });
+    })
 };
 
 const header = () => {
@@ -80,76 +88,18 @@ const createChild = () => {
 }
 
 const grid = () => {
-    const gridLayout = document.querySelectorAll(".grid-layout");
+    const gridLayout = document.querySelectorAll(".four-columns, .two-columns");
     for (let i = 0; i < gridLayout.length; i++) {
         const parent = gridLayout[i];
         const children = parent.children;
         const childrenArray = Array.from(children);
-
-        if (parent.children.length != 2) {
-            for (let i = parent.children.length; i < 4; i++) {
-                parent.appendChild(createChild());
+        childrenArray.forEach(child => {
+            if (child.children.length == 0) {
+                child.classList.add("--empty");
             };
-        };
-        const childrenLength = parent.children.length;
-        console.log(childrenLength);
-        // const multiplesOf = (numbers, number) => numbers.filter(n => !(n % number));
-
-        if (parent.children.length == 2) {
-            parent.classList.add("two-columns");
-            childrenArray.forEach(child => {
-                child.classList.add("grid-block");
-                if (child.children.length == 0) {
-                    child.classList.add("--empty");
-                };
-            });
-        } else if (parent.children.length == 4) {
-            parent.classList.add("four-columns");
-            childrenArray.forEach(child => {
-                child.classList.add("grid-square");
-                if (child.children.length == 0) {
-                    child.classList.add("--empty");
-                };
-            });
-        };
+        });
     };
 };
-
-// window.onSpotifyIframeApiReady = (IFrameAPI) => {
-//     let element = document.getElementById('embed-iframe');
-//     let options = {
-//         uri: 'spotify:episode:7makk4oTQel546B0PZlDM5'
-//     };
-//     let callback = (EmbedController) => {
-//         document.querySelectorAll('ul#episodes > li > button').forEach(
-//             episode => {
-//                 episode.addEventListener('click', () => {
-//                     EmbedController.loadUri(episode.dataset.spotifyId)
-//                 });
-//             })
-//     };
-//     IFrameAPI.createController(element, options, callback);
-// };
-
-// window.onSpotifyIframeApiReady = (IFrameAPI) => {
-//     const embedded = document.querySelectorAll(".embed-spotify");
-//     embedded.forEach(element => {
-//         if (element.id === element.dataset.url) {
-//             let options = {
-//                 uri: element.dataset.url
-//             };
-//             IFrameAPI.createController(element, options);
-//         }
-
-//     });
-//     // let element = document.getElementById("embed-iframe");
-//     // let options = {
-//     //     uri: element.dataset.url
-//     // };
-//     // // console.log(elementUri)
-//     // // let callback = (EmbedController) => { };
-//     // IFrameAPI.createController(element, options);
-// };
 
 window.addEventListener("resize", documentHeight);
 documentHeight();
@@ -157,7 +107,3 @@ jsScroll();
 menu();
 header();
 grid();
-
-
-
-

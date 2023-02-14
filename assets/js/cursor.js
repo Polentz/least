@@ -1,6 +1,5 @@
 const cursor = document.getElementById("cursor");
-const links = document.querySelectorAll("a, .menu-btn, .close-btn, .filter-btn, .media-label, .card, .media-content-close, .audio-player svg, .seek-slider");
-const allImages = document.querySelectorAll(".grid-square img");
+const links = document.querySelectorAll("a, .menu-btn, .close-btn, .filter-btn, .all-media-btn, .media-label, .card-back a, .media-card .card-back, .media-content-close, .audio-player svg, .seek-slider");
 
 document.addEventListener("mousemove", (event) => {
     let x = event.pageX;

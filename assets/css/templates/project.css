@@ -1,0 +1,300 @@
+.content-section .gallery-layout.--outline {
+    outline: none;
+}
+
+.content-section .gallery-block {
+    padding-bottom: 0;
+}
+
+.content-section .gallery-btn {
+    padding-top: 0;
+}
+
+.media-card .card-front {
+    box-shadow: none;
+}
+
+.media-card {
+    cursor: pointer;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.media-card.unfiltered {
+    pointer-events: none;
+}
+
+.media-card.unfiltered>.card-front {
+    opacity: .2;
+}
+
+.media-card .card-back,
+.media-card .card-front {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--p-gap);
+    padding: var(--marg-s);
+    cursor: pointer;
+}
+
+.media-card:hover,
+.media-card.highlight {
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.media-card[data-category="texte"],
+.media-card[data-category="texte"]:hover,
+.media-card[data-category="reading"],
+.media-card[data-category="reading"]:hover,
+.media-card[data-category="lecture"],
+.media-card[data-category="lecture"]:hover {
+    background: -o-linear-gradient(47deg, #fff, #AF73BF);
+    background: linear-gradient(43deg, #fff, #AF73BF);
+}
+
+.media-card[data-category="video"],
+.media-card[data-category="video"]:hover {
+    background: -o-linear-gradient(47deg, #fff, #5896e7);
+    background: linear-gradient(43deg, #fff, #5896e7);
+}
+
+.media-card[data-category="podcast"],
+.media-card[data-category="podcast"]:hover {
+    background: -o-linear-gradient(47deg, #fff, #A8F0CD);
+    background: linear-gradient(43deg, #fff, #A8F0CD);
+}
+
+.media-article {
+    display: none;
+    position: relative;
+    min-height: calc(var(--doc-height) - var(--header));
+}
+
+.media-article.show-content {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-auto-flow: row dense;
+    justify-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.media-title {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: sticky;
+    top: 0;
+    padding: var(--marg-s);
+    -ms-grid-column-span: 1;
+    grid-column: span 1;
+}
+
+.media-content {
+    position: relative;
+    -ms-grid-column-span: 3;
+    grid-column: span 3;
+    outline: var(--border);
+    padding: var(--marg-s) 0;
+}
+
+.media-content-header {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: var(--marg-s);
+    padding: 0 var(--marg-s);
+}
+
+.svg-tag svg {
+    display: block;
+    width: var(--txt-small);
+    stroke-width: 1.5px;
+    stroke: var(--bg-color);
+    mix-blend-mode: difference;
+}
+
+
+.media-content-close svg {
+    display: block;
+    width: var(--txt-small);
+    stroke: var(--txt-color);
+    stroke-width: 1.5px;
+}
+
+.svg-lecture svg,
+.svg-podcast svg,
+.svg-video svg {
+    display: block;
+    width: var(--txt-small);
+    stroke: var(--txt-color);
+    stroke-width: 1.5px;
+}
+
+.svg-lecture,
+.svg-podcast,
+.svg-video {
+    display: none;
+}
+
+.media-content-category {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    gap: .8rem;
+}
+
+.media-content-category:not(:last-of-type) {
+    margin-bottom: .5rem;
+}
+
+.media-content-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: var(--marg-s);
+}
+
+.video-wrapper video,
+.content-text-image img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    vertical-align: baseline;
+    border: var(--border);
+}
+
+.video-title {
+    margin-top: .8rem;
+}
+
+.media-content-close {
+    cursor: pointer;
+}
+
+.content-text-component,
+.content-audio-component,
+.content-video-component {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: var(--marg-s);
+}
+
+.content-text-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: var(--p-gap);
+    padding: 0 var(--marg-s);
+}
+
+.content-text-image,
+.video-wrapper {
+    padding: 0 var(--marg-s);
+}
+
+.content-audio-component {
+    width: 75%;
+    padding: 0 var(--marg-s);
+}
+
+@media screen and (max-width: 910px) {
+    .media-article.show-content {
+        display: block;
+    }
+
+    .media-title {
+        position: static;
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+    .media-card .card-back,
+    .media-card .card-front {
+        height: auto;
+    }
+
+    .filtered {
+        -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+        order: -1;
+    }
+
+    .media-card.unfiltered>.card-back {
+        opacity: .2;
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-device-width: 320px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
+    .media-card .card-front {
+        box-shadow: none;
+    }
+
+    .card-back {
+        background-color: transparent;
+    }
+
+    .media-card .card-front p,
+    .media-card .card-back p,
+    .media-card .media-content-filter {
+        color: var(--bg-color) !important;
+    }
+
+    .media-card .svg-lecture svg,
+    .media-card .svg-podcast svg,
+    .media-card .svg-video svg {
+        stroke: var(--bg-color);
+    }
+
+    .media-content {
+        padding-bottom: var(--marg-m);
+    }
+
+    .svg-tag svg {
+        stroke: var(--txt-color);
+    }
+
+    .content-audio-component,
+    .audio-time {
+        width: auto;
+    }
+}

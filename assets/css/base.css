@@ -184,13 +184,15 @@ em::-moz-selection,
 i::-moz-selection,
 u::-moz-selection,
 strong::-moz-selection,
-mark::-moz-selection {
+mark::-moz-selection,
+figcaption::-moz-selection {
     background-color: transparent;
     color: var(--acc-color);
 }
 
 span::-moz-selection,
-img::-moz-selection {
+img::-moz-selection,
+figure::-moz-selection {
     color: transparent;
     background: transparent;
 }
@@ -210,13 +212,15 @@ em::selection,
 i::selection,
 u::selection,
 strong::selection,
-mark::selection {
+mark::selection,
+figcaption::selection {
     background-color: transparent;
     color: var(--acc-color);
 }
 
 span::selection,
-img::selection {
+img::selection,
+figure::selection {
     color: transparent;
     background: transparent;
 }
